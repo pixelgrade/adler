@@ -1,21 +1,19 @@
 {
-    "name": "patch",
-    "devDependencies": {
-        "gulp": "*",
-        "gulp-sass": "*",
+	"name": "cola",
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-livereload": "~1.0.1",
+		"gulp-concat": "~2.1.7",
+		"gulp-clean": "~0.2.4",
+		"gulp-autoprefixer": "0.0.6",
+		"gulp-notify": "*",
+		"gulp-exec": "~1.0.4",
+		"gulp-zip": "~0.1.2",
+		"gulp-replace": "~0.3.0",
+		"gulp-csscomb": "*",
+		"gulp-yuicompressor": "*",
         "gulp-ruby-sass": "~0.7.1",
-        "gulp-autoprefixer": "*",
-        "gulp-minify-css": "*",
-        "gulp-ignore": "*",
-        "gulp-livereload": "*",
-        "gulp-notify": "*",
-        "gulp-concat": "~2.1.7",
-        "gulp-exec": "~2.0.1",
-        "gulp-replace": "~0.4.0",
-        "gulp-clean": "~0.3.1",
-        "gulp-beautify": "*",
-        "gulp-csscomb": "*",
-        "gulp-combine-media-queries": "*",
+        "gulp-sass": "1.0.0",
         "gulp-chmod": "*"
-    }
+	}
 }
