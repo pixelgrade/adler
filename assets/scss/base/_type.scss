@@ -33,6 +33,19 @@ body {
   hyphens: auto;
 }
 
+/* Links */
+
+%link {
+  border-bottom: 3px solid $accent;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  @extend %link;
+  transition: all 0.15s;
+}
+
 /* Headings */
 
 h1, %h1, h2, %h2, h3, %h3, h4, %h4, h5, %h5 {
@@ -73,6 +86,38 @@ p {
   margin-bottom: 40px;
 }
 
+b,
+strong {
+  font-weight: 800;
+  color: $black;
+}
+
+/* Lists */
+
+ul {
+  list-style: none;
+  padding-left: 40px;
+}
+
+ol {
+  padding-left: 30px;
+}
+
+ul, ol {
+  margin-bottom: 40px;
+}
+
+ul li:before {
+  content: "•";
+  font-size: 60%;
+  padding-right: 10px;
+}
+
+li {
+  font-size: 13px;
+  line-height: 2.692;
+}
+
 /* Blockquotes */
 
 .blockquote {
@@ -103,9 +148,20 @@ p {
   
 }
 
-a {
-  text-decoration: none;
-  color: currentColor;
-  border-bottom: 3px solid $accent;
-  transition: all 0.15s;
+/* Caption */
+
+.wp-caption-text {
+  padding-top: 10px;
+  color: $caption;
+  text-align: center;
+}
+
+/* Comments */
+
+.comment-author.vcard a {
+  @extend %link;
+}
+
+.comment-metadata a {
+  border-bottom: none;
 }

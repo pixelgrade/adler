@@ -1,0 +1,19 @@
+.reply {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.comment-list li {
+  position: relative;
+}
+
+.comment-form-comment {
+  position: relative;
+}
+
+label[for=comment] {
+  position: absolute;
+  left: 0;
+  top: -30px;
+}
