@@ -165,3 +165,17 @@ li {
 .comment-metadata a {
   border-bottom: none;
 }
+
+/* Navigation */
+
+.title {
+  @extend %alpha;
+  display: inline-block;
+  text-align: center;
+}
+
+.subtitle {
+  @extend %beta;
+  display: inline-block;
+  text-align: center;
+}
