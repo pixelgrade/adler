@@ -10,9 +10,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'adler_txtd' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'adler_txtd' ), 'PixelGrade' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'adler_txtd' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'adler_txtd' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s', 'adler_txtd' ), 'The Adler' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'adler_txtd' ), 'Adler', '<a href="http://pixelgrade.com" rel="designer">PixelGrade</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
