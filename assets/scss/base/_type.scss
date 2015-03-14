@@ -168,14 +168,21 @@ li {
 
 /* Navigation */
 
-.title {
-  @extend %alpha;
+.site-branding {
+
+}
+
+%title-subtitle {
   display: inline-block;
   text-align: center;
 }
 
+.title {
+  @extend %alpha;
+  @extend %title-subtitle;
+}
+
 .sub-title {
   @extend %beta;
-  display: inline-block;
-  text-align: center;
+  @extend %title-subtitle;
 }

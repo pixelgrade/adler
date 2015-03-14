@@ -29,7 +29,7 @@ if ( has_post_thumbnail() ) {
 	<div class="header-content">
 		<h1 class="hero__title">
 			<span class="title"><?php echo $split_titles[0]; ?></span>
-			<span class="subtitle"><?php echo $split_titles[1]; ?></span>
+			<span class="sub-title"><?php echo $split_titles[1]; ?></span>
 		</h1>
 	</div>
 <?php } ?>
