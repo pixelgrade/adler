@@ -70,6 +70,9 @@ function the_adler_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	//Default Fonts
+	wp_enqueue_style( 'patch-fonts', adler_fonts_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
