@@ -1,0 +1,44 @@
+.site-header {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.50);
+
+  a {
+    color: #FFF;
+  }
+}
+
+#site-navigation {
+  width: 79%;
+  display: inline-block;
+  text-align: right;
+
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.site-branding {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+
+  a {
+    text-decoration: none;
+  }
+}
+

@@ -31,6 +31,7 @@ function the_adler_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'the-adler' ),
+        'footer' => __('Footer Menu', 'the-adler')
 	) );
 
 	/*
