@@ -72,7 +72,7 @@ function the_adler_scripts() {
 	}
 
 	//Default Fonts
-	wp_enqueue_style( 'patch-fonts', adler_fonts_url(), array(), null );
+	wp_enqueue_style( 'hive-fonts', adler_fonts_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
