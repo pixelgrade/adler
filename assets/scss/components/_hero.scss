@@ -29,6 +29,27 @@
     margin: auto;
     position: absolute;
     top: -24%; left: 0; bottom: 0; right: 0;
+
+    .hero__meta {
+      width: 100%;
+
+      .hero_categories {
+        display: inline-block;
+
+        &::after {
+          content: " - ";
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .hero_date {
+        display: inline-block;
+      }
+
+    }
   }
 
 }
