@@ -57,3 +57,10 @@
     text-decoration: none;
   }
 }
+
+.header-content {
+  position: relative;
+  .hero__title {
+    position: absolute;
+  }
+}
