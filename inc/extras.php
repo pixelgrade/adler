@@ -83,9 +83,12 @@ function split_title_half( $string, $center = 0.4 ) {
 		}
 		$result[ $index ] .= $word . ' ';
 	}
+	/*
 	print $result[0];
 	print '</br>';
 	print $result[1];
+	*/
+	return $result;
 }
 
 if ( ! function_exists( 'adler_fonts_url' ) ) :

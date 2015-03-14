@@ -7,6 +7,7 @@ global $post;
 	<?php
 	$hero_class = "";
 	$hero_style = "";
+	$split_titles = split_title_half(get_the_title());
 	if ( has_post_thumbnail() ) {
 		$attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
 		$image_url        = $attachment_image[0];
@@ -22,7 +23,10 @@ global $post;
 
 	<?php //Wrapper for elements on hero area ?>
 	<div class="hero__content-wrap  content  align-center">
-		<h1 class="hero__title"><?php split_title_half(get_the_title()); ?></h1>
+		<h1 class="hero__title">
+			<span class="title"><?php echo $split_titles[0]; ?></span>
+			<span class="subtitle"><?php echo $split_titles[1]; ?></span>
+		</h1>
 		<!--Create wrapper for categories and date -->
 		<div class="hero__meta">
 			<div class="hero_categories">
@@ -41,12 +45,12 @@ global $post;
 			<div class="hero_date">
 				<?php
 				//Posted date
-				the_date( 'j F, Y', '<h2>', '</h2>' );
+				the_time( get_option( 'date_format' ) );
 				?>
 			</div>
 		</div>
-		<a class="arrow-wrap" href="#post-1">
-			<span class="arrow"></span>
-		</a>
 	</div>
+	<a class="arrow-wrap" href="#post-<?php echo $post->ID; ?>">
+		<span class="arrow"></span>
+	</a>
 </div>
