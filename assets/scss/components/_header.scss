@@ -4,6 +4,10 @@
   border-bottom: 1px solid #000000;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.50);
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
 
   a {
     color: #FFF;
