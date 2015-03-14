@@ -12,23 +12,25 @@ if ( has_post_thumbnail() ) {
 	$hero_class .= "hero_has_image";
 	$hero_style .= ' style="background-image: url(\'' . $image_url . '\')"'; ?>
 	<div class="hero__content">
-		<div class="hero__bg <?php echo $hero_class; ?>" <?php echo $hero_style; ?>>
-		</div>
+		<div class="hero__bg <?php echo $hero_class; ?>" <?php echo $hero_style; ?>></div>
 		<div class="hero__content-wrap content align-center">
+			<!-- The title of page divided in two parts-->
 			<h1 class="hero__title">
 				<span class="title"><?php echo $split_titles[0]; ?></span>
-				<span class="subtitle"><?php echo $split_titles[1]; ?></span>
+				<span class="sub-title"><?php echo $split_titles[1]; ?></span>
 			</h1>
 		</div>
+		<!-- Down arrow -->
 		<a class="arrow-wrap" href="#post-<?php echo $post->ID; ?>">
 			<span class="arrow"></span>
 		</a>
 	</div>
-<?php } else {
-	?>
-	<h1 class="hero__title">
-		<span class="title"><?php echo $split_titles[0]; ?></span>
-		<span class="subtitle"><?php echo $split_titles[1]; ?></span>
-	</h1>
+<?php } else { ?>
+	<div class="header-content">
+		<h1 class="hero__title">
+			<span class="title"><?php echo $split_titles[0]; ?></span>
+			<span class="subtitle"><?php echo $split_titles[1]; ?></span>
+		</h1>
+	</div>
 <?php } ?>
 
