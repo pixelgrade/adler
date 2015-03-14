@@ -14,6 +14,12 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'adler_txtd' ), 'Adler', '<a href="http://pixelgrade.com" rel="designer">PixelGrade</a>' ); ?>
 		</div><!-- .site-info -->
+		<nav id="footer-navigation" class="footer-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="footer-menu" aria-expanded="false">
+				<?php _e( 'Footer Menu', 'adler_txtd' ); ?>
+			</button>
+			<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
+		</nav><!-- #site-navigation-footer -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
