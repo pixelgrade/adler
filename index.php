@@ -23,7 +23,6 @@ get_header(); ?>
 			if ($counter++ < 1) {
 				continue;
 			}
-
 			get_template_part( 'content', get_post_format() );
 		endwhile;
 			the_posts_navigation();
