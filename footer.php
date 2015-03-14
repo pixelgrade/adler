@@ -10,9 +10,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'the-adler' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'the-adler' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'adler_txtd' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'adler_txtd' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s', 'the-adler' ), 'The Adler' ); ?>
+			<?php printf( __( 'Theme: %1$s', 'adler_txtd' ), 'The Adler' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
