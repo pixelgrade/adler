@@ -70,6 +70,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	add_action( 'wp_head', 'the_adler_render_title' );
 endif;
 
+
 //Split the title into two equal strings
 function split_title_half( $string, $center = 0.4 ) {
 	$length2 = strlen( $string ) * $center;
@@ -86,3 +87,59 @@ function split_title_half( $string, $center = 0.4 ) {
 	print '</br>';
 	print $result[1];
 }
+
+if ( ! function_exists( 'adler_fonts_url' ) ) :
+
+	/**
+	 * Generate the Google Fonts URL
+	 *
+	 * Based on this article http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+	 */
+	function adler_fonts_url() {
+		$fonts_url = '';
+
+		/* Translators: If there are characters in your language that are not
+		* supported by Droid Serif, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$droid_serif = _x( 'on', 'Droid Serif font: on or off', 'adler_txtd' );
+
+		/* Translators: If there are characters in your language that are not
+		* supported by Permanent Marker, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$permanent_marker = _x( 'on', 'Permanent Marker font: on or off', 'adler_txtd' );
+
+		/* Translators: If there are characters in your language that are not
+		* supported by Droid Sans Mono, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$droid_sans_mono = _x( 'on', 'Droid Sans Mono font: on or off', 'adler_txtd' );
+
+
+		if ( 'off' !== $droid_serif || 'off' !== $permanent_marker || 'off' !== $droid_sans_mono) {
+			$font_families = array();
+
+			if ( 'off' !== $droid_serif ) {
+				$font_families[] = 'Droid Serif:400,700,400italic,700italic';
+			}
+
+			if ( 'off' !== $permanent_marker ) {
+				$font_families[] = 'Permanent Marker:400';
+			}
+
+			if ( 'off' !== $droid_sans_mono ) {
+				$font_families[] = 'Droid Sans Mono:400';
+			}
+
+			$query_args = array(
+				'family' => urlencode( implode( '|', $font_families ) ),
+				'subset' => urlencode( 'latin,latin-ext' ),
+			);
+
+			$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		}
+
+		return $fonts_url;
+	}
+endif;

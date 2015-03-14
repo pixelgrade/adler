@@ -1,0 +1,111 @@
+// #TYPOGRAPHY
+
+%alpha {
+  font-family: 'Droid Serif', serif;
+}
+
+%beta {
+  font-family: 'Permanent Marker', cursive;
+}
+
+%gama {
+  font-family: 'Droid Sans Mono', serif;
+}
+
+/* General */
+
+html {
+  font-size: percentage($base-font-size / 16px);
+  line-height: $base-line-height / $base-font-size;
+}
+
+body {
+  @extend %gama;
+  color: $gray;
+}
+
+.hyphening {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Headings */
+
+h1, %h1, h2, %h2, h3, %h3, h4, %h4, h5, %h5 {
+  color: $dark;
+  font-weight: bold;
+  text-align: center;
+  @extend %alpha;
+}
+
+%marginheader { margin-bottom: 40px; }
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: $dark;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 20px;
+  @extend %marginheader;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 13px;
+  @extend %marginheader;
+}
+
+/* Paragraphs */
+
+p {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Blockquotes */
+
+.blockquote {
+  @extend %beta;
+  font-size: 45px;
+  text-align: center;
+  line-height: 1.44;
+  color: $dark;
+  margin-left: -225px;
+  margin-right: -225px;
+  margin-bottom: 70px;
+  position: relative;
+  
+  &:after {
+    content: "";
+    background-size: 50px 62px;
+    background-color: $accent;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  border-bottom: 3px solid $accent;
+  transition: all 0.15s;
+}
