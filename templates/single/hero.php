@@ -57,7 +57,7 @@ global $post;
 			$has_more = strpos( $post->post_content, '<!--more' );
 
 			if ( $has_more ) {
-				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-adler' ) );
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'adler_txtd' ) );
 			} else {
 				the_excerpt(); ?>
 				<div class="hero_read_more">
@@ -66,7 +66,7 @@ global $post;
 			<?php
 			}
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'the-adler' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'adler_txtd' ),
 				'after'  => '</div>',
 			) ); ?>
 		</div>

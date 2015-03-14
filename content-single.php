@@ -17,7 +17,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'the-adler' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'adler_txtd' ),
 				'after'  => '</div>',
 			) );
 		?>
