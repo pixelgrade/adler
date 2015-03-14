@@ -20,10 +20,8 @@ global $post;
 
 	</div>
 
-	<?php //Wrapper for elements on hero area ?>
+	<!-- Wrapper for elements on hero area -->
 	<div class="hero__content-wrap  content  align-center">
-		<h1 class="hero__title"><?php split_title_half(get_the_title()); ?></h1>
-		<!--Create wrapper for categories and date -->
 		<div class="hero__meta">
 			<div class="hero_categories">
 				<?php
@@ -45,8 +43,26 @@ global $post;
 				?>
 			</div>
 		</div>
-		<a class="arrow-wrap" href="#post-1">
-			<span class="arrow"></span>
-		</a>
+		<h1 class="hero__title"><?php split_title_half(get_the_title()); ?></h1>
+		<div class="entry-content">
+			<?php
+			global $post;
+			// Check the content for the more text
+			$has_more = strpos( $post->post_content, '<!--more' );
+			if ( $has_more ) {
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'adler_txtd' ) );
+			} else {
+				the_excerpt(); ?>
+				<div class="hero_read_more">
+					<a href="<?php the_permalink(); ?>">Read More</a>
+				</div>
+			<?php
+			}
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'adler_txtd' ),
+				'after'  => '</div>',
+			) ); ?>
+		</div>
+		<!-- .entry-content -->
 	</div>
 </div>

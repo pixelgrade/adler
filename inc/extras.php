@@ -69,3 +69,20 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'the_adler_render_title' );
 endif;
+
+//Split the title into two equal strings
+function split_title_half( $string, $center = 0.4 ) {
+	$length2 = strlen( $string ) * $center;
+	$tmp     = explode( ' ', $string );
+	$index   = 0;
+	$result  = Array( 0 => '', 1 => '' );
+	foreach ( $tmp as $word ) {
+		if ( ! $index && strlen( $result[0] ) > $length2 ) {
+			$index ++;
+		}
+		$result[ $index ] .= $word . ' ';
+	}
+	print $result[0];
+	print '</br>';
+	print $result[1];
+}
