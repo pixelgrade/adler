@@ -24,7 +24,7 @@ if ( has_post_thumbnail() ) {
 					$output     = '';
 					if ( $categories ) {
 						foreach ( $categories as $category ) {
-							$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler_txtd' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+							$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 						}
 						echo trim( $output, $separator );
 					} ?>
@@ -79,23 +79,23 @@ if ( has_post_thumbnail() ) {
 				$output     = '';
 				if ( $categories ) {
 					foreach ( $categories as $category ) {
-						$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler_txtd' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+						$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 					}
 					echo trim( $output, $separator );
 				} ?>
 			</div>
 			<div class="hero_date">
-				<?php
-				//Posted date
-				the_time( get_option( 'date_format' ) );
-				?>
+					<?php
+					//Posted date
+					the_time( get_option( 'date_format' ) );
+					?>
+			</div>
 			</div>
 			<!-- The title of page divided in two parts-->
 			<h1 class="hero__title">
 				<span class="title"><?php echo $split_titles[0]; ?></span>
 				<span class="sub-title"><?php echo $split_titles[1]; ?></span>
 			</h1>
-
 			<div class="entry-content">
 				<?php // Check the content for the more text
 				$has_more = strpos( $post->post_content, '<!--more' );
