@@ -1,12 +1,4 @@
 .entry-wrapper {
   max-width: 600px;
   margin: 0 auto;
-
-  p {
-    @include query-below($small) {
-      margin:0 5px;
-    }
-
-    
   }
-}
