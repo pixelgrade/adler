@@ -45,18 +45,6 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
-
-		/*
-		 * Enable support for Post Formats.
-		 * See http://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-		) );
 	}
 endif; // the_adler_setup
 add_action( 'after_setup_theme', 'the_adler_setup' );
@@ -121,7 +109,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
