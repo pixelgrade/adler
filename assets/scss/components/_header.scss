@@ -49,6 +49,12 @@
       a {
         text-decoration: none;
         @extend %gama;
+        border-bottom-width: 0px;
+        border-bottom-color: $accent;
+        border-bottom-style: solid;
+        &:hover {
+          border-bottom-width: 3px;
+        }
       }
     }
   }

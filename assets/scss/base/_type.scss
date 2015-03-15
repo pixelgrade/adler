@@ -43,7 +43,7 @@ a {
   text-decoration: none;
   color: currentColor;
   @extend %link;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 
 /* Headings */
@@ -170,6 +170,8 @@ li {
 
 %title-subtitle {
   display: block;
+  clear: right;
+  line-height: 1;
 }
 
 .title {
