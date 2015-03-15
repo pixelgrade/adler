@@ -1,5 +1,50 @@
+.site-footer {
+
+  max-width: 1200px;
+  margin: 80px auto 40px auto;
+}
+
 .site-info {
-  margin-left: auto;
   margin-right: auto;
-  max-width: 85em;
+  display: inline-block;
+  margin-left: 40px;
+
+}
+
+#footer-navigation {
+  //width: 75%;
+  float: right;
+  text-align: right;
+  margin-right: 40px;
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    ul {
+      margin: 0 auto;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      &:before {
+        content: "";
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+        @extend %gama;
+        border-bottom-width: 0px;
+        border-bottom-color: $accent;
+        border-bottom-style: solid;
+        &:hover {
+          border-bottom-width: 3px;
+        }
+      }
+    }
+  }
 }
