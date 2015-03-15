@@ -91,6 +91,22 @@ function the_adler_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
+//Registering Sidebar
+
+function adler_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Main Sidebar', 'adler_txtd' ),
+		'id' => 'sidebar-1',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+
+add_action( 'widgets_init', 'adler_widgets_init' );
+
 /**
  * Implement the Custom Header feature.
  */
