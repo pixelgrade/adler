@@ -72,7 +72,7 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 	function the_adler_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" hidden datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -83,18 +83,26 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			_x( 'Posted on %s', 'post date', 'adler_txtd' ),
+			_x( '%s', 'post date', 'adler_txtd' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		$byline = sprintf(
-			_x( 'by %s', 'post author', 'adler_txtd' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
+		echo '<span class="posted-on">' . $posted_on . '</span>'; ?>
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
-
-	}
+		<div class="hero_categories">
+						<?php
+						//Display the categories of the post
+						$categories = get_the_category();
+						$separator  = ' ';
+						$output     = '';
+						if ( $categories ) {
+							foreach ( $categories as $category ) {
+								$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+							}
+							echo trim( $output, $separator );
+						} ?>
+		</div>
+	<?php }
 endif;
 
 if ( ! function_exists( 'the_adler_entry_footer' ) ) :
@@ -123,7 +131,7 @@ if ( ! function_exists( 'the_adler_entry_footer' ) ) :
 			echo '</span>';
 		}
 
-		edit_post_link( __( 'Edit', 'adler_txtd' ), '<span class="edit-link">', '</span>' );
+		//edit_post_link( __( 'Edit', 'adler_txtd' ), '<span class="edit-link">', '</span>' );
 	}
 endif;
 

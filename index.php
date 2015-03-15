@@ -20,8 +20,8 @@ get_header(); ?>
 		$counter = 0;
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 			if ( has_post_thumbnail($posts[0]->ID) && ($counter == 0)) {
-				//get_template_part( 'templates/archive/hero' );
 				get_template_part( 'content', 'hero' );
+				$counter++;
 				continue;
 			}
 			if ($counter%2 == 1) {
