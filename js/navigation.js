@@ -65,7 +65,7 @@
 
         //define arrow opacity as based on how far up the page the user has scrolled
         //no scrolling = 1, half-way up the page = 0
-        $('.arrow-wrap').css('opacity', position);
+        //$('.arrow-wrap').css('opacity', position);
 
     });
 
