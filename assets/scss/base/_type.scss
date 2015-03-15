@@ -43,7 +43,7 @@ a {
   text-decoration: none;
   color: currentColor;
   @extend %link;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 
 /* Headings */
@@ -168,14 +168,18 @@ li {
 
 /* Navigation */
 
-.title {
-  @extend %alpha;
-  display: inline-block;
-  text-align: center;
+%title-subtitle {
+  display: block;
+  clear: right;
+  line-height: 1;
 }
 
-.subtitle {
+.title {
+  @extend %alpha;
+  @extend %title-subtitle;
+}
+
+.sub-title {
   @extend %beta;
-  display: inline-block;
-  text-align: center;
+  @extend %title-subtitle;
 }
