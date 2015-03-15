@@ -130,6 +130,7 @@ gulp.task('build', ['copy-folder'], function () {
         '.sass*',
         '**/.git*',
         '*.sublime-project',
+        '*.sublime-workspace',
         '.DS_Store',
         '**/.DS_Store',
         '__MACOSX',
