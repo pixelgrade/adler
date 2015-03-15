@@ -1,5 +1,5 @@
 {
-  "name": "cola",
+  "name": "adler",
   "devDependencies": {
     "gulp": "*",
     "gulp-livereload": "~1.0.1",

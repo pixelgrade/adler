@@ -1,0 +1,22 @@
+.post-navigation {
+  display: none;
+}
+
+.single {
+  .has-thumbnail, .no-thumbnail {
+    .post {
+      background-color: transparent;
+    }
+  }
+  .post {
+    .entry-wrapper {
+      margin-bottom: 40px;
+      .entry-footer {
+        .tags-links {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
