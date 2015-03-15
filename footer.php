@@ -7,7 +7,7 @@
  * @package The Adler
  */
 ?>
-
+	<?php get_sidebar(); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'adler_txtd' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'adler_txtd' ), 'WordPress' ); ?></a>
