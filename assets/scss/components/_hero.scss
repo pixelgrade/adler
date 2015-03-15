@@ -64,12 +64,21 @@
       .title {
         @extend %white-hero;
         @extend %hero-gradient;
+
+        @include query-below($small) {
+          font-size: 100%;
+        }
       }
 
 
       .sub-title {
         @extend %white-hero;
         @extend %hero-gradient;
+
+        @include query-below($small) {
+          font-size: 100%;
+        }
+
       }
 }
 
