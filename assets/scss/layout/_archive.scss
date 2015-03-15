@@ -1,6 +1,6 @@
 .post{
-  background-color: $lightest;
   padding-top: 80px;
+  background-color: $lightest;
 
   &.hero-content {
     padding-top: 0;
@@ -17,14 +17,21 @@
       }
     }
 
+    .entry-thumbnail {
+      margin-left: -100px;
+      margin-right: -100px;
+    }
+
     .main-wrapper {
       position: relative;
-      background-color: $lightest;
+      background-color: #f7f7f7;
       padding-left: 50px;
       padding-right: 50px;
       padding-top: 50px;
-      padding-bottom: 80px;
-      margin-top: -40px;
+      padding-bottom: 100px;
+      margin-top: -50px;
+      margin-left: -50px;
+      margin-right: -50px;
 
       .entry__read-more {
         width: 100px;
@@ -42,7 +49,6 @@
       }
 
       .entry-footer {
-
         .entry-meta {
           display: flex;
           float: left;
