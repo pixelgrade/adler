@@ -1,4 +1,4 @@
-.post{
+.post {
   padding-top: 80px;
   background-color: $lightest;
 
@@ -93,10 +93,28 @@
     }
 
   }
+
   &.even-post {
     background-color: $white;
+
     .main-wrapper {
       background-color: $white;
+    }
+
+  }
+
+}
+
+.no-thumbnail {
+  .site-main {
+    article:nth-child(1) {
+      .entry-wrapper {
+        .entry-header {
+          h1 {
+            margin-bottom: 50px;
+          }
+        }
+      }
     }
   }
 }
