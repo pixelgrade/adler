@@ -9,6 +9,15 @@
   left: 0;
 }
 
+%logo-settings {
+  a img {
+    position: absolute;
+    max-width: 180px;
+    max-height: 100px;
+    overflow: hidden;
+  }
+}
+
 .no-thumbnail {
 
   .site-header {
@@ -25,6 +34,8 @@
   }
 
   .site-branding {
+
+    @extend %logo-settings;
 
     .site-title {
 
@@ -89,6 +100,8 @@
   width: 20%;
   text-align: left;
   margin-top: 10px;
+
+  @extend %logo-settings;
 
   .site-title {
     font-size: 14px;
@@ -180,11 +193,11 @@
   @extend .nav--stacked;
 
   position: absolute;
-  top: 100%;
+  top: 0%;
   left: 50%;
 
   display: none;
-  min-width: 170px;
+  min-width: 200px;
 
   text-align: center;
 

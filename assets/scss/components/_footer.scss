@@ -1,5 +1,4 @@
 .site-footer {
-
   max-width: 1200px;
   margin: 80px auto 40px auto;
 }
@@ -12,7 +11,6 @@
 }
 
 #footer-navigation {
-  //width: 75%;
   float: right;
   text-align: right;
   margin-right: 40px;
@@ -32,6 +30,17 @@
 
       &:before {
         content: "";
+      }
+
+      &.menu-item-has-children {
+
+        &:after {
+          display: none;
+        }
+
+        .sub-menu {
+          display: none;
+        }
       }
 
       a {
