@@ -57,6 +57,12 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 				'caption',
 			)
 		);
+
+		/*
+		 * Add editor custom style to make it look more like the frontend
+		 * Also enqueue the custom Google Fonts also
+		 */
+		add_editor_style( array( 'editor-style.css', adler_fonts_url() ) );
 	}
 endif; // the_adler_setup
 add_action( 'after_setup_theme', 'the_adler_setup' );
