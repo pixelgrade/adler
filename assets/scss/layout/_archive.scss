@@ -2,6 +2,10 @@
   padding-top: 80px;
   background-color: $lightest;
 
+  @include query-below($small){
+    padding-top: 15px;
+  }
+
   &.hero-content {
     padding-top: 0;
   }
@@ -10,7 +14,7 @@
     position: relative;
 
     @include query-below($small){
-      padding: 0 5%
+      padding: 0 1%
     }
 
     .entry-header {
@@ -24,18 +28,22 @@
     .entry-thumbnail {
       margin-left: -100px;
       margin-right: -100px;
+
+      @include query-below ($small) {
+        margin: 0;
+      }
     }
 
     .main-wrapper {
       position: relative;
       background-color: #f7f7f7;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 100px;
-      margin-top: -50px;
-      margin-left: -50px;
-      margin-right: -50px;
+      padding: 50px 50px 100px 50px;
+      margin: -50px -50px 0 -50px;
+
+      @include query-below($small){
+        padding: 15px;
+        margin: 0;
+      }
 
       .entry__read-more {
         width: 100px;
