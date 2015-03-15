@@ -65,7 +65,7 @@
 				</div>
 			</div>
 			<!-- Down arrow -->
-			<a class="arrow-wrap" href="#post-<?php echo $post->ID; ?>">
+			<a class="arrow-wrap">
 				<span class="arrow"></span>
 			</a>
 		</div>

@@ -105,6 +105,9 @@
           display: none;
         }
 
+        @include query-below($small) {
+          padding-bottom: 30px;
+        }
       }
 
     }
