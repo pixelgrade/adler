@@ -9,6 +9,15 @@
   left: 0;
 }
 
+%logo-settings {
+  a img {
+    position: absolute;
+    max-width: 180px;
+    max-height: 100px;
+    overflow: hidden;
+  }
+}
+
 .no-thumbnail {
 
   .site-header {
@@ -26,6 +35,8 @@
 
   .site-branding {
 
+    @extend %logo-settings;
+
     .site-title {
 
       a {
@@ -36,7 +47,7 @@
 
   }
 
-  #site-navigation {
+  .main-navigation {
 
     .menu {
 
@@ -50,7 +61,7 @@
 
 }
 
-#site-navigation {
+.main-navigation {
   width: 80%;
   float: right;
   text-align: right;
@@ -89,6 +100,8 @@
   width: 20%;
   text-align: left;
   margin-top: 10px;
+
+  @extend %logo-settings;
 
   .site-title {
     font-size: 14px;
@@ -175,7 +188,7 @@
 \*----------------------------------------*/
 
 /*ul*/
-.sub-menu {
+.sub-menu, .children {
   @extend .nav;
   @extend .nav--stacked;
 
@@ -184,7 +197,7 @@
   left: 50%;
 
   display: none;
-  min-width: 170px;
+  min-width: 200px;
 
   text-align: center;
 
@@ -197,11 +210,15 @@
     transform: none;
   }
 
+  .main-navigation & li:before {
+    content: none;
+  }
+
   a {
     //padding: $_u2;
   }
 
-  .menu-item-has-children {
+  .menu-item-has-children, .page_item_has_children {
     position: relative;
 
     &:after {
@@ -218,7 +235,7 @@
   }
 }
 
-.menu-item-has-children {
+.menu-item-has-children, .page_item_has_children {
   position: relative;
 
   &:hover:after {
@@ -238,21 +255,13 @@
     width: 5px;
     height: 5px;
 
-    border-right: 1px solid $dark;
-    border-bottom: 1px solid $dark;
-
-    .header--transparent & {
-      border-color: white;
-    }
-
-    .headroom--not-top & {
-      border-color: $dark;
-    }
+    border-right: 1px solid $white;
+    border-bottom: 1px solid $white;
 
     transform: translateY(-50%) rotate(45deg);
   }
 
-  &:hover > .sub-menu {
+  &:hover > .sub-menu, &:hover > .children  {
     display: block;
   }
 }

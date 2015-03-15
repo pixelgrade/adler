@@ -1,6 +1,9 @@
 #comments {
   max-width: 600px;
   margin: 0 auto;
+  textarea {
+    width: 100%;
+  }
 }
 
 .reply {
@@ -11,6 +14,15 @@
 
 .comment-list li {
   position: relative;
+  &.bypostauthor {
+    background: $lightest;
+    padding: 10px;
+
+    .reply {
+      right: 10px;
+    }
+
+  }
 }
 
 .comment-form-comment {

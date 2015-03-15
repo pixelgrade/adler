@@ -2,3 +2,41 @@
   max-width: 600px;
   margin: 0 auto;
   }
+
+
+%no-thumbnail-title {
+  .entry-wrapper {
+    .entry-header {
+      h1 {
+        z-index: 5;
+      }
+    }
+  }
+}
+
+.site-main {
+  @extend %no-thumbnail-title;
+  .nav-links {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .nav-previous {
+      float: left;
+      margin-bottom: 40px;
+    }
+
+    .nav-next {
+      float: right;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.sticky {
+  .hero__content .hero__content-wrap .hero__title {
+    .title, .sub-title {
+      color: $accent;
+    }
+  }
+}

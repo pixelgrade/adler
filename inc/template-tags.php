@@ -79,7 +79,7 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 			$output     = '';
 			if ( $categories ) {
 				foreach ( $categories as $category ) {
-					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler_txtd' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 				}
 				echo trim( $output, $separator );
 			} ?>
@@ -130,7 +130,7 @@ if ( ! function_exists( 'the_adler_entry_footer' ) ) :
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="comments-link"> <i class="fa fa-comments"></i>';
 			comments_popup_link( __( 'Leave a comment', 'adler_txtd' ), __( '1 Comment', 'adler_txtd' ), __( '% Comments', 'adler_txtd' ) );
 			echo '</span>';
 		}
