@@ -78,33 +78,6 @@ function the_adler_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
-//Add logo feature in Customizer
-function sanitize_logo() {
-
-}
-
-function adler_logo_option( $wp_customize ) {
-	$wp_customize->add_section( 'adler_txtd_logo_section', array(
-			'title'       => __( 'Logo', 'adler_txtd' ),
-			'priority'    => 30,
-			'description' => 'Upload a logo to replace the default site name and description in the header',
-		)
-	);
-	$wp_customize->add_setting( 'adler_txtd_logo',array(
-		'sanitize_callback' => 'sanitize_logo',
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'adler_txtd_logo', array(
-				'label'    => __( 'Logo', 'adler_txtd' ),
-				'section'  => 'adler_txtd_logo_section',
-				'settings' => 'adler_txtd_logo',
-			)
-		)
-	);
-}
-
-add_action( 'customize_register', 'adler_logo_option' );
-
 /**
  * Implement the Custom Header feature.
  */
