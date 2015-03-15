@@ -188,7 +188,7 @@
 \*----------------------------------------*/
 
 /*ul*/
-.sub-menu {
+.sub-menu, .children {
   @extend .nav;
   @extend .nav--stacked;
 
@@ -218,7 +218,7 @@
     //padding: $_u2;
   }
 
-  .menu-item-has-children {
+  .menu-item-has-children, .page_item_has_children {
     position: relative;
 
     &:after {
@@ -235,7 +235,7 @@
   }
 }
 
-.menu-item-has-children {
+.menu-item-has-children, .page_item_has_children {
   position: relative;
 
   &:hover:after {
@@ -258,18 +258,10 @@
     border-right: 1px solid $white;
     border-bottom: 1px solid $white;
 
-    .header--transparent & {
-      border-color: $white;
-    }
-
-    .headroom--not-top & {
-      border-color: $dark;
-    }
-
     transform: translateY(-50%) rotate(45deg);
   }
 
-  &:hover > .sub-menu {
+  &:hover > .sub-menu, &:hover > .children  {
     display: block;
   }
 }
