@@ -103,7 +103,6 @@ function adler_logo_option( $wp_customize ) {
 
 add_action( 'customize_register', 'adler_logo_option' );
 
-
 /**
  * Implement the Custom Header feature.
  */
