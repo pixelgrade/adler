@@ -9,6 +9,10 @@
   .entry-wrapper {
     position: relative;
 
+    @include query-below($small){
+      padding: 0 5%
+    }
+
     .entry-header {
 
       h1 {
