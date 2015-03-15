@@ -1,3 +1,24 @@
-.post-navigation {
-  display: none;
+.single {
+  .has-thumbnail, .no-thumbnail {
+    .post {
+      background-color: transparent;
+    }
+  }
+  .no-thumbnail {
+    .header-content {
+      .hero__meta {
+        display: none;
+      }
+    }
+  }
+  .post {
+    .entry-wrapper {
+      margin-bottom: 40px;
+      .entry-footer {
+        .tags-links {
+          float: right;
+        }
+      }
+    }
+  }
 }
