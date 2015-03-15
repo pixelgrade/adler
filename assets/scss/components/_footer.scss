@@ -30,13 +30,13 @@
         content: "";
       }
 
-      &.menu-item-has-children {
+      &.menu-item-has-children, &.page_item_has_children {
 
         &:after {
           display: none;
         }
 
-        .sub-menu {
+        .sub-menu, .children {
           display: none;
         }
       }
