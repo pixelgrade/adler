@@ -28,6 +28,10 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_theme_support( "title-tag" );
+		add_theme_support( 'automatic-feed-links' );
+
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'adler_txtd' ),
@@ -39,12 +43,13 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 	}
 endif; // the_adler_setup
 add_action( 'after_setup_theme', 'the_adler_setup' );
@@ -74,6 +79,9 @@ function the_adler_scripts() {
 add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
 //Add logo feature in Customizer
+function sanitize_logo() {
+
+}
 
 function adler_logo_option( $wp_customize ) {
 	$wp_customize->add_section( 'adler_txtd_logo_section', array(
@@ -82,7 +90,9 @@ function adler_logo_option( $wp_customize ) {
 			'description' => 'Upload a logo to replace the default site name and description in the header',
 		)
 	);
-	$wp_customize->add_setting( 'adler_txtd_logo' );
+	$wp_customize->add_setting( 'adler_txtd_logo',array(
+		'sanitize_callback' => 'sanitize_logo',
+	) );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'adler_txtd_logo', array(
 				'label'    => __( 'Logo', 'adler_txtd' ),

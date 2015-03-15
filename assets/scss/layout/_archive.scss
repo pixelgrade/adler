@@ -55,6 +55,10 @@
         margin-left: auto;
         margin-right: auto;
 
+        @include query-below($small){
+          margin-bottom: 15px;
+        }
+
         a {
           border-bottom: none;
           color: $dark;
