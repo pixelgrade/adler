@@ -51,7 +51,9 @@
     position: absolute;
     top: -24%; left: 0; bottom: 0; right: 0;
 
-
+    @include query-below ($small){
+    width: 100%;
+  }
     .entry-content {
       p {
 
@@ -71,7 +73,7 @@
 
         @include query-below($small) {
           font-size: 100%;
-          display: inline;
+          display: block;
           padding:0 5px;
         }
       }
@@ -83,7 +85,7 @@
 
         @include query-below($small) {
           font-size: 100%;
-          display: inline;
+          display: block;
           padding:0 5px;
         }
 
