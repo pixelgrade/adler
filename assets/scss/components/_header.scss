@@ -47,7 +47,7 @@
 
   }
 
-  #site-navigation {
+  .main-navigation {
 
     .menu {
 
@@ -61,7 +61,7 @@
 
 }
 
-#site-navigation {
+.main-navigation {
   width: 80%;
   float: right;
   text-align: right;
@@ -193,7 +193,7 @@
   @extend .nav--stacked;
 
   position: absolute;
-  top: 0%;
+  top: 100%;
   left: 50%;
 
   display: none;
@@ -208,6 +208,10 @@
   .lt-ie9 & {
     left: 0;
     transform: none;
+  }
+
+  .main-navigation & li:before {
+    content: none;
   }
 
   a {

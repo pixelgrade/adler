@@ -33,23 +33,24 @@
 
   %white-hero {
   font-size: 103px;
-  line-height: 1.373;
+  line-height: 1.2;
   color: $lightest;
   position: relative;
 }
 
   %hero-gradient {
-    background-image: linear-gradient(transparent 0%, transparent 45%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.5) 92%, transparent 92%, transparent 100%);
+    background-image: linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
     background-size: 100% 100%;
   }
 
   .hero__content-wrap {
-    width: 50%;
-    height: 1%;
+    max-width: 600px;
     overflow: visible;
     margin: auto;
     position: absolute;
-    top: -24%; left: 0; bottom: 0; right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 
     @include query-below ($small){
     width: 100%;
@@ -66,6 +67,8 @@
     }
 
     .hero__title {
+
+       margin-bottom: 30px;
 
       .title {
         @extend %white-hero;
@@ -137,13 +140,14 @@
   z-index:1;
   left:50%;
   bottom: 5em;
-  margin-left:-5em;
-  width:10em;
-  height:10em;
-  padding:4em 2em;
-  border-radius:50%;
-  font-size:0.5em;
+
   display:block;
+
+  border-radius:50%;
+
+  font-size:0.5em;
+
+  transform: translateX(-50%);
 }
 
 a.arrow-wrap {
@@ -153,27 +157,9 @@ a.arrow-wrap {
 .arrow {
   float:left;
   position:relative;
-  width: 40px;
-  height: 40px;
-  box-shadow: 2px 2px white;
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+  box-shadow: 1px 1px white;
   -webkit-transform:rotate(45deg)
-}
-
-@-webkit-keyframes arrows {
-  0% { top:0; }
-  10% { top:12%; }
-  20% { top:0; }
-  30% { top:12%; }
-  40% { top:-12%; }
-  50% { top:12%; }
-  60% { top:0; }
-  70% { top:12%; }
-  80% { top:-12%; }
-  90% { top:12%; }
-  100% { top:0; }
-}
-
-.arrow-wrap .arrow {
-  -webkit-animation: arrows 2.8s 0.4s;
-  -webkit-animation-delay: 3s;
 }

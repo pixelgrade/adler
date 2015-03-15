@@ -55,7 +55,7 @@ h1, %h1, h2, %h2, h3, %h3, h4, %h4, h5, %h5 {
   @extend %alpha;
 }
 
-%marginheader { margin-bottom: 40px; }
+%marginheader { margin-bottom: 20px; }
 
 h1 {
   font-size: 60px;
@@ -128,7 +128,7 @@ li {
   color: $dark;
   margin-left: -225px;
   margin-right: -225px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   position: relative;
   
   &:after {
@@ -150,7 +150,7 @@ li {
 
 /* Caption */
 
-.wp-caption-text {
+.wp-caption-text, .gallery-caption {
   padding-top: 10px;
   color: $caption;
   text-align: center;

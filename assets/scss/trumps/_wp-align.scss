@@ -37,9 +37,9 @@ img {
 
 .aligncenter, .alignnone {
     @include query-above($lap) {
-        margin-left: -3 * $gutter;
-        margin-right: -3 * $gutter;
-        max-width: calc(#{6 * $gutter} + 100%);
+        margin-left: -7 * $gutter;
+        margin-right: -7 * $gutter;
+        max-width: calc(#{14 * $gutter} + 100%);
     }
 
     text-align: center;
@@ -53,7 +53,7 @@ img {
     margin-top: rhythm(1);
 
     @include query-above($lap) {
-        max-width: calc(50% + #{3 * $gutter} - 20px);
+        max-width: calc(50% + #{7 * $gutter} - 20px);
     }
 
     p + & {
@@ -71,7 +71,7 @@ img {
     margin-right: rhythm(1.5);
 
     @include query-above($lap) {
-        margin-left: -3 * $gutter;
+        margin-left: -7 * $gutter;
     }
 }
 
@@ -80,7 +80,7 @@ img {
     margin-left: rhythm(1.5);
 
     @include query-above($lap) {
-        margin-right: -3 * $gutter;
+        margin-right: -7 * $gutter;
     }
 }
 
