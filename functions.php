@@ -53,7 +53,11 @@ add_action( 'after_setup_theme', 'the_adler_setup' );
  * Enqueue scripts and styles.
  */
 function the_adler_scripts() {
-	wp_enqueue_style( 'the-adler-style', get_stylesheet_uri() );
+
+	//FontAwesome Stylesheet
+	wp_enqueue_style( 'the-adler-font-awesome-style', get_stylesheet_directory_uri() . '/assets/css/font-awesome.css', array(), '4.2.0' );
+
+	wp_enqueue_style( 'the-adler-style', get_stylesheet_uri(), array('the-adler-font-awesome-style') );
 
 	wp_enqueue_script( 'the-adler-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
 

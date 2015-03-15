@@ -20,7 +20,7 @@
     .entry-header {
 
       h1 {
-        margin-bottom: -10px;
+        margin-bottom: 50px;
         position: relative;
       }
     }
@@ -28,6 +28,8 @@
     .entry-thumbnail {
       margin-left: -100px;
       margin-right: -100px;
+      margin-top: -60px;
+      text-align: center;
 
       @include query-below ($small) {
         margin: 0;
@@ -85,6 +87,9 @@
 
         .comments-link {
           float: right;
+            i {
+              padding-right: 5px;
+            }
 
           a {
             border-bottom: none;
@@ -111,24 +116,4 @@
 
   }
 
-}
-
-%no-thumbnail-title {
-  .entry-wrapper {
-    .entry-header {
-      h1 {
-        margin-bottom: 50px;
-        z-index: 5;
-      }
-    }
-  }
-}
-
-.no-thumbnail {
-  .site-main {
-    @extend %no-thumbnail-title;
-    article:nth-child(1) {
-      @extend %no-thumbnail-title;
-    }
-  }
 }

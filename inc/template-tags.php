@@ -130,7 +130,7 @@ if ( ! function_exists( 'the_adler_entry_footer' ) ) :
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="comments-link"> <i class="fa fa-comments"></i>';
 			comments_popup_link( __( 'Leave a comment', 'adler_txtd' ), __( '1 Comment', 'adler_txtd' ), __( '% Comments', 'adler_txtd' ) );
 			echo '</span>';
 		}
