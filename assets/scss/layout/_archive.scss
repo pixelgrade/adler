@@ -28,6 +28,7 @@
     .entry-thumbnail {
       margin-left: -100px;
       margin-right: -100px;
+      text-align: center;
 
       @include query-below ($small) {
         margin: 0;
