@@ -1,19 +1,22 @@
 {
-	"name": "cola",
-	"devDependencies": {
-		"gulp": "*",
-		"gulp-livereload": "~1.0.1",
-		"gulp-concat": "~2.1.7",
-		"gulp-clean": "~0.2.4",
-		"gulp-autoprefixer": "0.0.6",
-		"gulp-notify": "*",
-		"gulp-exec": "~1.0.4",
-		"gulp-zip": "~0.1.2",
-		"gulp-replace": "~0.3.0",
-		"gulp-csscomb": "*",
-		"gulp-yuicompressor": "*",
-        "gulp-ruby-sass": "~0.7.1",
-        "gulp-sass": "1.0.0",
-        "gulp-chmod": "*"
-	}
+  "name": "cola",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-livereload": "~1.0.1",
+    "gulp-concat": "~2.1.7",
+    "gulp-clean": "~0.2.4",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-notify": "*",
+    "gulp-exec": "~1.0.4",
+    "gulp-zip": "~0.1.2",
+    "gulp-replace": "~0.3.0",
+    "gulp-csscomb": "*",
+    "gulp-yuicompressor": "*",
+    "gulp-ruby-sass": "~0.7.1",
+    "gulp-sass": "1.0.0",
+    "gulp-chmod": "*"
+  },
+  "dependencies": {
+    "gulp-install": "^0.2.0"
+  }
 }
