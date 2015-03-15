@@ -1,32 +1,54 @@
 .site-header {
   width: 100%;
+  height: 80px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #000000;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.50);
+  padding: 20px;
   position: absolute;
   z-index: 50;
   top: 0;
   left: 0;
-
-  a {
-    color: #FFF;
-  }
 }
 
 .no-thumbnail {
+
   .site-header {
     background-color: transparent;
     border-bottom: none;
     position: relative;
     padding-left: 40px;
     padding-right: 40px;
+
     a {
       border-bottom: none;
-      color: $black;
+      @extend %gama;
       }
-    }
   }
+
+  .site-branding {
+
+    .site-title {
+
+      a {
+        color: $black;
+      }
+
+    }
+
+  }
+
+  #site-navigation {
+
+    .menu {
+
+      a {
+        color: $black;
+      }
+
+    }
+
+  }
+
+}
 
 #site-navigation {
   width: 80%;
@@ -47,6 +69,7 @@
       }
 
       a {
+        color: $lightest;
         text-decoration: none;
         @extend %gama;
         border-bottom-width: 0px;
@@ -76,6 +99,9 @@
 
   a {
     text-decoration: none;
+    border-bottom: 0;
+    color: $lightest;
+    @extend %gama;
   }
 }
 
