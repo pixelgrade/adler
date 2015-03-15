@@ -1,6 +1,14 @@
 .site-footer {
   width: 100%;
   padding: 80px 40px 40px 40px;
+
+  @include query-below($small) {
+    text-align: center;
+  }
+  @include query-below($lap){
+    text-align: center;
+    float: none;
+  }
 }
 
 .site-info {
@@ -12,6 +20,15 @@
 .footer-navigation {
   float: right;
   text-align: right;
+  @include query-below($small) {
+    text-align: center;
+    float: none;
+  }
+
+  @include query-below($lap){
+    text-align: center;
+    float: none;
+  }
 
   .menu-toggle {
     display: none;
@@ -30,13 +47,13 @@
         content: "";
       }
 
-      &.menu-item-has-children {
+      &.menu-item-has-children, &.page_item_has_children {
 
         &:after {
           display: none;
         }
 
-        .sub-menu {
+        .sub-menu, .children {
           display: none;
         }
       }
