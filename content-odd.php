@@ -8,12 +8,12 @@ $split_titles = split_title_half( get_the_title() );
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'odd-post' ); ?>>
 	<div class="entry-wrapper">
 		<header class="entry-header">
-			<a href="<?php the_permalink(); ?>">
 				<h1 class="hero__title">
-					<span class="title"><?php echo $split_titles[0]; ?></span>
-					<span class="sub-title"><?php echo $split_titles[1]; ?></span>
+					<a href="<?php the_permalink(); ?>">
+						<span class="title"><?php echo $split_titles[0]; ?></span>
+						<span class="sub-title"><?php echo $split_titles[1]; ?></span>
+					</a>
 				</h1>
-			</a>
 		</header>
 		<?php if ( has_post_thumbnail() ) { ?>
 			<div class="entry-thumbnail">
@@ -26,6 +26,9 @@ $split_titles = split_title_half( get_the_title() );
 				<?php the_excerpt(); ?>
 			</div>
 			<!-- .entry-content -->
+			<div class="entry__read-more">
+				<a href="<?php the_permalink(); ?>">READ MORE</a>
+			</div>
 			<footer class="entry-footer">
 				<?php if ( 'post' == get_post_type() ) : ?>
 					<div class="entry-meta">

@@ -69,7 +69,25 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function the_adler_posted_on() {
+	function the_adler_posted_on() { ?>
+
+		<div class="hero_categories">
+			<?php
+			//Display the categories of the post
+			$categories = get_the_category();
+			$separator  = ' ';
+			$output     = '';
+			if ( $categories ) {
+				foreach ( $categories as $category ) {
+					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+				}
+				echo trim( $output, $separator );
+			} ?>
+		</div>
+
+		<?php echo '<span class="separator"> - </span>'; ?>
+
+		<?php
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" hidden datetime="%3$s">%4$s</time>';
@@ -87,22 +105,8 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; ?>
-
-		<div class="hero_categories">
-						<?php
-						//Display the categories of the post
-						$categories = get_the_category();
-						$separator  = ' ';
-						$output     = '';
-						if ( $categories ) {
-							foreach ( $categories as $category ) {
-								$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
-							}
-							echo trim( $output, $separator );
-						} ?>
-		</div>
-	<?php }
+		echo '<span class="posted-on">' . $posted_on . '</span>';
+	}
 endif;
 
 if ( ! function_exists( 'the_adler_entry_footer' ) ) :

@@ -121,13 +121,14 @@
 // @import "objects/button";
 // @import "objects/search-form";
 
-
 // #VENDOR
+@import "vendor/font-awesome/variables";
 
 // #LAYOUT
 @import "layout/page";
-@import "layout/posts";
+@import "layout/general";
 @import "layout/single";
+@import "layout/archive";
 
 // #COMPONENTS
 
