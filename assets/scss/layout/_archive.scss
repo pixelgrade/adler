@@ -105,16 +105,22 @@
 
 }
 
+%no-thumbnail-title {
+  .entry-wrapper {
+    .entry-header {
+      h1 {
+        margin-bottom: 50px;
+        z-index: 5;
+      }
+    }
+  }
+}
+
 .no-thumbnail {
   .site-main {
+    @extend %no-thumbnail-title;
     article:nth-child(1) {
-      .entry-wrapper {
-        .entry-header {
-          h1 {
-            margin-bottom: 50px;
-          }
-        }
-      }
+      @extend %no-thumbnail-title;
     }
   }
 }

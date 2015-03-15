@@ -115,3 +115,144 @@
     position: relative;
   }
 }
+
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.nav {
+  list-style: none;
+  margin-left: 0;
+  @extend .cf;
+
+  > li {
+
+    &,
+    > a {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+    }
+  }
+}
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--stacked {
+
+  > li {
+    display: list-item;
+
+    > a {
+      display: block;
+    }
+  }
+}
+
+/*----------------------------------------*\
+    $SUBMENUS
+\*----------------------------------------*/
+
+/*ul*/
+.sub-menu {
+  @extend .nav;
+  @extend .nav--stacked;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  display: none;
+  min-width: 170px;
+
+  text-align: center;
+
+  background: transparent;
+
+  transform: translateX(-50%);
+
+  .lt-ie9 & {
+    left: 0;
+    transform: none;
+  }
+
+  a {
+    //padding: $_u2;
+  }
+
+  .menu-item-has-children {
+    position: relative;
+
+    &:after {
+      right: 10px;
+
+      transform: rotate(-45deg);
+    }
+  }
+
+  .sub-menu {
+    left: 100%;
+    top: 0;
+    transform: translateX(0);
+  }
+}
+
+.menu-item-has-children {
+  position: relative;
+
+  &:hover:after {
+    border-color: $accent;
+  }
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: -10px;
+
+    margin-top: -2px;
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    border-right: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+
+    .header--transparent & {
+      border-color: white;
+    }
+
+    .headroom--not-top & {
+      border-color: $dark;
+    }
+
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &:hover > .sub-menu {
+    display: block;
+  }
+}
