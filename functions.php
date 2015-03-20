@@ -57,6 +57,14 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 				'caption',
 			)
 		);
+
+		add_theme_support( 'custom-background' );
+
+		/*
+		 * Add editor custom style to make it look more like the frontend
+		 * Also enqueue the custom Google Fonts also
+		 */
+		add_editor_style( array( 'editor-style.css', adler_fonts_url() ) );
 	}
 endif; // the_adler_setup
 add_action( 'after_setup_theme', 'the_adler_setup' );
@@ -84,6 +92,22 @@ function the_adler_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
+
+//Registering Sidebar
+
+function adler_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Main Sidebar', 'adler_txtd' ),
+		'id' => 'sidebar-1',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+
+add_action( 'widgets_init', 'adler_widgets_init' );
 
 /**
  * Implement the Custom Header feature.
