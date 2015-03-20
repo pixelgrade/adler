@@ -1,9 +1,3 @@
 .error-404 .not-found {
-  width: 600px;
-  margin: 0 auto;
-  .page-content {
-    .widget {
-      display: none;
-    }
-  }
+  @extend %no-content;
 }

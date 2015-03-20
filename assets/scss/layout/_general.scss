@@ -1,9 +1,37 @@
-.entry-wrapper {
+/* Extends */
+
+%entry-wrapper {
   max-width: 600px;
   margin: 0 auto;
   @extend %hyphening;
-  }
+}
 
+%blockquote {
+  @extend %beta;
+  font-size: 45px;
+  text-align: center;
+  line-height: 1.44;
+  color: $dark;
+  margin-left: -225px;
+  margin-right: -225px;
+  margin-bottom: 50px;
+  position: relative;
+
+  &:after {
+    content: "";
+    background-size: 50px 62px;
+    background-color: $accent;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
 
 %no-thumbnail-title {
   .entry-wrapper {
@@ -13,6 +41,42 @@
       }
     }
   }
+}
+
+%no-content {
+  @extend %entry-wrapper;
+  .page-header {
+    .page-title {
+      h1 {
+        @extend %blockquote;
+      }
+    }
+  }
+
+  .page-content {
+    .widget {
+      display: none;
+    }
+  }
+}
+
+%shadow {
+  box-shadow: inset 0px 0px 250px 0px rgba(0 , 0 , 0 , 0.75);
+}
+
+%logo-settings {
+  a img {
+    position: absolute;
+    max-width: 180px;
+    max-height: 100px;
+    overflow: hidden;
+  }
+}
+
+/* Layouts */
+
+.entry-wrapper {
+  @extend %entry-wrapper;
 }
 
 .site-main {
