@@ -1,0 +1,15 @@
+.search-results {
+    .content-area {
+        @extend %entry-wrapper;
+        .page-header {
+            .page-title {
+                    @extend %blockquote;
+            }
+        }
+        article {
+          .entry-footer {
+            display: none;
+          }
+        }
+    }
+}

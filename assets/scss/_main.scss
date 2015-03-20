@@ -30,8 +30,9 @@
 @import "layout/single";
 @import "layout/posts";
 @import "layout/categories";
-@import "layout/404";
-@import "layout/no-content";
+@import "layout/error404";
+@import "layout/nocontent";
+@import "layout/search-results";
 
 // #COMPONENTS
 @import "components/header";

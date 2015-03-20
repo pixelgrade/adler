@@ -1,0 +1,14 @@
+.search-no-results {
+  .site-content {
+    .content-area {
+      @extend %no-content;
+      .no-results {
+        .page-header {
+          .page-title {
+            @extend %blockquote;
+          }
+        }
+      }
+    }
+  }
+}

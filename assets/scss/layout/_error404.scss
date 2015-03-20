@@ -1,0 +1,12 @@
+.error404 {
+  .content-area {
+    @extend %no-content;
+    .error-404 {
+      .page-header {
+        .page-title {
+          @extend %blockquote;
+        }
+      }
+    }
+  }
+}
