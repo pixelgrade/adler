@@ -5,6 +5,8 @@
  * @package The Adler
  */
 
+
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -132,4 +134,20 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+//require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Adler Class
+ */
+require get_template_directory() . '/inc/adler.php';
+
+/**
+ * Load Customify plugin configuration
+ */
+require get_template_directory() . '/inc/customify_config.php';
+
+/**
+ * Load Recommended/Required plugins notification
+ */
+require get_template_directory() . '/inc/required-plugins/required-plugins.php';
+

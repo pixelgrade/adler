@@ -21,9 +21,23 @@
 <div id="page" class="site <?php if (has_post_thumbnail() ) { ?>has-thumbnail<?php } else { ?>no-thumbnail<?php } ?>">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title">
+			<a class="logo" href="<?php echo home_url(); ?>">
+				<?php
+				$main_logo_url = adler::get_customify_option('main_logo');
+				if ( !empty($main_logo_url) ) {
+					echo '<img src="' . $main_logo_url . '"/>';
+				}
+				?>
+			</a>
+			<?php if ( !empty($main_logo_url)) {?>
+			<h1 class="no-site-title">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </h1>
+			<?php } else { ?>
+				<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</h1>
+			<?php } ?>
 		</div><!-- .site-branding -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">

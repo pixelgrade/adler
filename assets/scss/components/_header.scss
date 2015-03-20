@@ -92,13 +92,19 @@
   text-align: left;
   margin-top: 10px;
 
-  @extend %logo-settings;
+  .logo {
+    @extend %logo-settings;
+  }
 
   .site-title {
     font-size: 14px;
     line-height: 1;
     margin-bottom: 0;
     text-align: left;
+  }
+
+  .no-site-title {
+    display: none;
   }
 
   a {
