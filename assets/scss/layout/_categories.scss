@@ -1,0 +1,27 @@
+.archive.category {
+  article {
+    .entry-wrapper {
+      .entry-header {
+        .entry-meta {
+          display: flex;
+          margin-bottom: 10px;
+        }
+      }
+      .entry-footer {
+        .cat-link {
+          float: left;
+        }
+        .comments-link {
+          float: right;
+            i {
+              padding-right: 5px;
+            }
+
+            a {
+              border-bottom: none;
+            }
+        }
+      }
+    }
+  }
+}

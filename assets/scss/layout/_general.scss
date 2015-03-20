@@ -41,3 +41,14 @@
     }
   }
 }
+
+.separator {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+p {
+  a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"] {
+    border: none;
+  }
+}

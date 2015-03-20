@@ -67,7 +67,7 @@ add_action( 'after_setup_theme', 'the_adler_setup' );
 function the_adler_scripts() {
 
 	//FontAwesome Stylesheet
-	wp_enqueue_style( 'the-adler-font-awesome-style', get_stylesheet_directory_uri() . '/assets/css/font-awesome.css', array(), '4.2.0' );
+	wp_enqueue_style( 'the-adler-font-awesome-style', get_stylesheet_directory_uri() . '/assets/css/font-awesome.css', array(), '4.3.0' );
 
 	wp_enqueue_style( 'the-adler-style', get_stylesheet_uri(), array('the-adler-font-awesome-style') );
 
