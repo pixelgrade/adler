@@ -24,15 +24,10 @@
 			<a class="logo" href="<?php echo home_url(); ?>">
 				<?php
 				$main_logo_url = adler::get_customify_option('main_logo');
-				if ( !empty($main_logo_url) ) {
-					echo '<img src="' . $main_logo_url . '"/>';
-				}
 				?>
 			</a>
 			<?php if ( !empty($main_logo_url)) {?>
-			<h1 class="no-site-title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-            </h1>
+				<?php echo '<img src="' . $main_logo_url . '"/>'; ?>
 			<?php } else { ?>
 				<h1 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
