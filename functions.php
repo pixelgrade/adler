@@ -60,8 +60,6 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 			)
 		);
 
-		add_theme_support( 'custom-background' );
-
 		/*
 		 * Add editor custom style to make it look more like the frontend
 		 * Also enqueue the custom Google Fonts also
