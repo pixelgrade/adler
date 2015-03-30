@@ -25,9 +25,9 @@ function wpgrade_register_required_plugins() {
 		array(
 			'name'               => 'Customify',
 			'slug'               => 'customify',
-			'required'           => true,
+			'required'           => false,
 			'version'            => '1.1.0',
-			'force_activation'   => true,
+			'force_activation'   => false,
 			'force_deactivation' => true,
 		),
 	);
