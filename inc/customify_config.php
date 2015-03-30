@@ -21,7 +21,7 @@ function adler_add_customify_base_options( $config ) {
 			'title'    => __( 'General Settings', 'customify_txtd' ),
 			'sections' => array(
 				'section_id'     => array(
-					'title'   => __( 'Logos', 'customify_txtd' ),
+					'title'   => __( 'Logo', 'customify_txtd' ),
 					'options' => array(
 						'main_logo' => array(
 							'type'  => 'image',

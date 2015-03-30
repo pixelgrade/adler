@@ -3,7 +3,7 @@
 /**
  * General theme class
  */
-include_once(ABSPATH.'wp-admin/includes/plugin.php');
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 class adler {
 	static function get_customify_option( $option, $default = null ) {
