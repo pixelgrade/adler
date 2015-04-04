@@ -36,10 +36,8 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 		 * Enable support for Post Thumbnails on posts and pages.
 		 */
 		add_theme_support( 'post-thumbnails' );
-
 		add_theme_support( "title-tag" );
 		add_theme_support( 'automatic-feed-links' );
-
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -95,7 +93,7 @@ add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
 //Registering Sidebar
 
-function adler_widgets_init() {
+function the_adler_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'adler_txtd' ),
 		'id' => 'sidebar-1',
@@ -107,7 +105,7 @@ function adler_widgets_init() {
 	) );
 }
 
-add_action( 'widgets_init', 'adler_widgets_init' );
+add_action( 'widgets_init', 'the_adler_widgets_init' );
 
 /**
  * Implement the Custom Header feature.
