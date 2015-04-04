@@ -107,6 +107,35 @@ function the_adler_widgets_init() {
 
 add_action( 'widgets_init', 'the_adler_widgets_init' );
 
+
+/**
+* Filters wp_title to print a neat <title> tag based on what is being viewed.
+*
+* @param string $title Default title text for current view.
+* @param string $sep Optional separator.
+* @return string The filtered title.
+*/
+function adler_wp_title( $title, $sep ) {
+    if ( is_feed() ) {
+        return $title;
+   }
+   global $page, $paged;
+
+	// Add the blog description for the home/front page.
+   $site_description = get_bloginfo( 'description', 'display' );
+   if ( $site_description && ( is_home() || is_front_page() ) ) {
+        $title .= " $sep $site_description";
+   }
+
+   // Add a page number if necessary:
+   if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+	   	$title .= " $sep " . sprintf( __( 'Page %s', 'adler' ), max( $paged, $page ) );
+   }
+   return $title;
+}
+
+add_filter( 'wp_title', 'adler_wp_title', 10, 2 );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -121,16 +150,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-//require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-//require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Load Adler Class
