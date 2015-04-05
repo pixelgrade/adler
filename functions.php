@@ -63,6 +63,11 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 		 * Also enqueue the custom Google Fonts also
 		 */
 		add_editor_style( array( 'editor-style.css', adler_fonts_url() ) );
+
+		$defaults = array(
+			'default-color'          => '#FFF'
+		);
+		add_theme_support( 'custom-background', $defaults );
 	}
 endif; // the_adler_setup
 add_action( 'after_setup_theme', 'the_adler_setup' );
@@ -95,8 +100,26 @@ add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
 
 function the_adler_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'adler_txtd' ),
-		'id' => 'sidebar-1',
+		'name' => __( 'Left Footer', 'adler_txtd' ),
+		'id' => 'sidebar-left',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Right Footer', 'adler_txtd' ),
+		'id' => 'sidebar-right',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Center Footer', 'adler_txtd' ),
+		'id' => 'sidebar-center',
 		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
