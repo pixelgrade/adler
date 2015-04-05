@@ -22,7 +22,7 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function the_adler_setup() {
+	function adler_setup() {
 
 		/*
 		 * Make theme available for translation.
@@ -70,12 +70,12 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 		add_theme_support( 'custom-background', $defaults );
 	}
 endif; // the_adler_setup
-add_action( 'after_setup_theme', 'the_adler_setup' );
+add_action( 'after_setup_theme', 'adler_setup' );
 
 /**
  * Enqueue scripts and styles.
  */
-function the_adler_scripts() {
+function adler_scripts() {
 
 	//FontAwesome Stylesheet
 	wp_enqueue_style( 'the-adler-font-awesome-style', get_stylesheet_directory_uri() . '/assets/css/font-awesome.css', array(), '4.3.0' );
@@ -94,11 +94,11 @@ function the_adler_scripts() {
 	wp_enqueue_style( 'hive-fonts', adler_fonts_url(), array(), null );
 }
 
-add_action( 'wp_enqueue_scripts', 'the_adler_scripts' );
+add_action( 'wp_enqueue_scripts', 'adler_scripts' );
 
 //Registering Sidebar
 
-function the_adler_widgets_init() {
+function adler_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Left Footer', 'adler_txtd' ),
 		'id' => 'sidebar-left',
@@ -128,7 +128,7 @@ function the_adler_widgets_init() {
 	) );
 }
 
-add_action( 'widgets_init', 'the_adler_widgets_init' );
+add_action( 'widgets_init', 'adler_widgets_init' );
 
 
 /**
@@ -143,12 +143,6 @@ function adler_wp_title( $title, $sep ) {
         return $title;
    }
    global $page, $paged;
-
-	// Add the blog description for the home/front page.
-   $site_description = get_bloginfo( 'description', 'display' );
-   if ( $site_description && ( is_home() || is_front_page() ) ) {
-        $title .= " $sep $site_description";
-   }
 
    // Add a page number if necessary:
    if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {

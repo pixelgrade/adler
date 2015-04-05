@@ -1,6 +1,9 @@
+@import "widgets";
+
 .site-footer {
   width: 100%;
   padding: 80px 40px 40px 40px;
+  display: inline-block;
 
   @include query-below($small) {
     text-align: center;
