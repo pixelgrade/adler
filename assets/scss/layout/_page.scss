@@ -6,24 +6,32 @@
   }
 }
 
-    .content-area {
-      .site-main {
-        nav {
-          .nav-links {
-            display: block;
-            max-width: 600px;
-            margin: 0 auto;
+.content-area {
+  .site-main {
+    .posts-navigation {
+      display: inline-block;
+      width: 300px;
+    }
+    nav {
+      .nav-links {
+        display: block;
+        max-width: 600px;
+        margin: 0 auto;
 
-            .nav-previous {
-              float: left;
-              margin-bottom: 40px;
-            }
+        .nav-previous {
+          float: left;
+          margin-bottom: 40px;
+        }
 
-            .nav-next {
-              float: right;
-              margin-bottom: 40px;
-            }
-          }
+        .nav-next {
+          float: right;
+          margin-bottom: 40px;
         }
       }
     }
+  }
+}
+
+.blog .site-main {
+  text-align: center;
+}
