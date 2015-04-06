@@ -5,3 +5,25 @@
     }
   }
 }
+
+    .content-area {
+      .site-main {
+        nav {
+          .nav-links {
+            display: block;
+            max-width: 600px;
+            margin: 0 auto;
+
+            .nav-previous {
+              float: left;
+              margin-bottom: 40px;
+            }
+
+            .nav-next {
+              float: right;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+    }

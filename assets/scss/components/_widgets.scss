@@ -1,4 +1,161 @@
-.widget-area {
-  width: 33.3%;
-  float: left;
+%header {
+  h2 {
+    margin-bottom: 0px;
+  }
+}
+
+%no-bullets {
+  li {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+%li-style {
+  border-bottom: none;
+  &:hover {
+    color: $accent;
+  }
+}
+
+.widgets-area {
+  text-align: center;
+  list-style: none;
+  display: inline-block;
+  @extend %no-bullets;
+  .widget-area {
+    width: 33.3%;
+    float: left;
+  }
+
+  .left-sidebar, .center-sidebar, .right-sidebar {
+    @extend %header;
+    .widget_nav_menu {
+      .menu-main-menu-container {
+        ul.menu {
+          margin: 0 auto;
+          margin-left: -40px;
+          li.menu-item a {
+            @extend %li-style;
+          }
+        }
+      }
+    }
+    .widget_recent_comments {
+      ul {
+        margin-left: -40px;
+        margin-bottom: 0px;
+        li.recentcomments {
+          a {
+            @extend %li-style;
+          }
+        }
+      }
+    }
+    .widget_pages {
+      ul {
+        margin-left: -40px;
+        li {
+          a {
+            @extend %li-style;
+          }
+        }
+      }
+    }
+    .widget_calendar {
+      #calendar_wrap {
+        table#wp-calendar {
+          background-color: $lightest;
+          margin: 0 auto;
+          caption {
+            color: $black;
+            font-size: 15px;
+          }
+          thead {
+            color: $dark;
+          }
+          tbody {
+            tr {
+              td {
+                padding-left: 5px;
+                a {
+                  color: $accent;
+                  @extend %li-style;
+                }
+              }
+            }
+          }
+          tfoot {
+            display: none;
+            tr {
+              td {
+                .pad {
+                  color: $dark;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .widget_meta {
+      ul {
+        margin: 0 auto;
+        margin-left: -40px;
+        @extend %no-bullets;
+        li {
+          a {
+            @extend %li-style;
+            abbr[title] {
+              color: $black;
+              @extend %li-style;
+            }
+          }
+        }
+      }
+    }
+    .widget_recent_entries {
+      ul {
+        margin: 0 auto;
+        margin-left: -40px;
+        @extend %no-bullets;
+        li {
+          a {
+            @extend %li-style;
+          }
+          span.post-date {
+            background-color: $lightest;
+          }
+        }
+      }
+    }
+    .widget_rss {
+      h2 {
+        a {
+          @extend %li-style;
+        }
+      }
+      ul {
+        margin: 0 auto;
+        margin-left: -40px;
+        li {
+          margin-bottom: 5px;
+          background-color: $lightest;
+          a {
+            color: $black;
+            @extend %li-style;
+          }
+        }
+      }
+    }
+    .widget_tag_cloud {
+      .tagcloud {
+        a {
+          background-color: $lightest;
+          @extend %li-style;
+        }
+      }
+    }
+  }
 }
