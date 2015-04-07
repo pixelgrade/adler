@@ -59,7 +59,8 @@
 
   .menu-toggle {
     display: none;
-    font-family:'FontAwesome';
+    font-family: 'FontAwesome';
+    color: #0E3650;
 
     @include query-below ($lap) {
       display: block !important;
@@ -76,6 +77,10 @@
         background-color: transparent;
       }
     }
+   &::focus {
+     border-color: none !important;
+
+   }
   }
 
   .menu {
@@ -88,6 +93,10 @@
       }
 
       a {
+
+        @include query-below($lap){
+          color: #0E3650;
+        }
         color: $lightest;
         text-decoration: none;
         @extend %gama;
@@ -206,6 +215,15 @@
   @extend .nav;
   @extend .nav--stacked;
 
+  @include query-below($lap){
+    top:0;
+    left:50%;
+    padding-left: 10px;
+    z-index: 1;
+    background-color: #FFF;
+    border: 1px solid #0E3650;
+
+  }
   position: absolute;
   top: 100%;
   left: 50%;
@@ -237,14 +255,19 @@
 
     &:after {
       right: 10px;
+      @include query-below($lap){
+        color: #0E3650;
+        display: block;
+        right: 0;
 
+      }
       transform: rotate(-45deg);
     }
   }
 
   .sub-menu {
-    left: 100%;
-    top: 0;
+    left: 0;
+    top: 5%;
     transform: translateX(0);
   }
 }
@@ -288,16 +311,34 @@
     }
   }
 
+  .menu-all-pages-container {
+
+    @include query-below($lap) {
+      background-color: #FFFFFF;
+      width: 100% !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+
+    }
+
+  }
   #site-navigation {
 
     &.toggled {
 
       #primary-menu li {
         display: block;
+
       }
       #primary-menu {
         display: block;
-        padding-top: 35px !important;
+        padding-top: 45px !important;
+        height: 80% !important;
+        margin-right: 15px;
+        text-align: center;
       }
     }
   }
