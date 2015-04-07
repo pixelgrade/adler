@@ -59,6 +59,23 @@
 
   .menu-toggle {
     display: none;
+    font-family:'FontAwesome';
+
+    @include query-below ($lap) {
+      display: block !important;
+      float: right !important;
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+
+
+      &::after {
+        content:"\f0c9";
+        width:100%;
+        height:100%;
+        background-color: transparent;
+      }
+    }
   }
 
   .menu {
@@ -262,3 +279,25 @@
     display: block;
   }
 }
+
+
+
+  #primary-menu {
+    @include query-below($lap) {
+      display: none;
+    }
+  }
+
+  #site-navigation {
+
+    &.toggled {
+
+      #primary-menu li {
+        display: block;
+      }
+      #primary-menu {
+        display: block;
+        padding-top: 35px !important;
+      }
+    }
+  }

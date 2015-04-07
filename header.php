@@ -39,7 +39,7 @@
 		<!-- .site-branding -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<?php _e( 'Primary Menu', 'adler_txtd' ); ?>
+				<?php _e( '', 'adler_txtd' ); ?>
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav>
