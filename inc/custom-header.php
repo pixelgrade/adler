@@ -1,6 +1,6 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
+ * Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
  *
  * You can add an optional custom header image to header.php like so ...
@@ -123,4 +123,4 @@ function the_adler_admin_header_image() {
 	</div>
 <?php
 }
-endif; // the_adler_admin_header_image
+endif; // the_adler_admin_header_image ?>

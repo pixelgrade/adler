@@ -23,4 +23,4 @@ add_action( 'customize_register', 'the_adler_customize_register' );
 function the_adler_customize_preview_js() {
 	wp_enqueue_script( 'the_adler_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
-add_action( 'customize_preview_init', 'the_adler_customize_preview_js' );
+add_action( 'customize_preview_init', 'the_adler_customize_preview_js' ); ?>

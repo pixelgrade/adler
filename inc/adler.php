@@ -14,4 +14,4 @@ class adler {
 	}
 }
 
-$adler = new adler();
+$adler = new adler(); ?>

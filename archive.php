@@ -18,22 +18,26 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<?php
 		$counter = 0;
-		if ( have_posts() ) : while ( have_posts() ) : the_post();
-			if ( has_post_thumbnail($posts[0]->ID) && ($counter == 0)) {
-				get_template_part( 'content', 'hero' );
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+				if ( has_post_thumbnail( $posts[0]->ID ) && ( 0 == $counter ) ) {
+					get_template_part( 'content', 'hero' );
+					$counter++;
+					continue;
+				}
+				if ( 1 == $counter % 2 ) {
+					get_template_part( 'content', 'odd' );
+				} else {
+					get_template_part( 'content', 'even' );
+				}
 				$counter++;
-				continue;
-			}
-			if ($counter%2 == 1) {
-				get_template_part( 'content', 'odd' );
-			} else {
-				get_template_part( 'content', 'even' );
-			}
-			$counter++;
-		endwhile;
+			endwhile;
+
 			the_posts_navigation();
-		else : get_template_part( 'content', 'none' );  endif;
-		?>
+
+		else :
+			get_template_part( 'content', 'none' );
+		endif; ?>
 	</main>
 	<!-- #main -->
 </div><!-- #primary -->

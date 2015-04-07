@@ -275,4 +275,4 @@ function the_adler_category_transient_flusher() {
 	delete_transient( 'the_adler_categories' );
 }
 add_action( 'edit_category', 'the_adler_category_transient_flusher' );
-add_action( 'save_post',     'the_adler_category_transient_flusher' );
+add_action( 'save_post',     'the_adler_category_transient_flusher' ); ?>
