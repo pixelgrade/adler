@@ -31,7 +31,7 @@
     .site-title {
 
       a {
-        color: $black;
+        color: $dark;
       }
 
     }
@@ -42,8 +42,10 @@
 
     .menu {
 
-      a {
-        color: $black;
+      li {
+          a {
+            color: $dark;
+          }
       }
 
     }
@@ -302,8 +304,6 @@
     display: block;
   }
 }
-
-
 
   #primary-menu {
     @include query-below($lap) {
