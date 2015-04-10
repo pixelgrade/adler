@@ -2,7 +2,7 @@
 /**
  * The Adler functions and definitions
  *
- * @package The Adler
+ * @package Adler
  */
 
 

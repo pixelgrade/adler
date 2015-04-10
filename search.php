@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package The Adler
+ * @package Adler
  */
 
 get_header(); ?>

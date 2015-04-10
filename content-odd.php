@@ -1,6 +1,6 @@
 <?php
 /**
- * @package The Adler
+ * @package Adler
  */
 $split_titles = adler_split_title_half( get_the_title() );
 ?>

@@ -2,7 +2,7 @@
 /**
  * The Adler Theme Customizer
  *
- * @package The Adler
+ * @package Adler
  */
 
 /**
