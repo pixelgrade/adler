@@ -80,4 +80,4 @@ function adler_add_customify_base_options( $config ) {
 	return $config;
 }
 
-add_filter( 'customify_filter_fields', 'adler_add_customify_base_options' );
+add_filter( 'customify_filter_fields', 'adler_add_customify_base_options' ); ?>

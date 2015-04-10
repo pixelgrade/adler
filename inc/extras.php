@@ -72,7 +72,7 @@ endif;
 
 
 //Split the title into two equal strings
-function split_title_half( $string, $center = 0.4 ) {
+function adler_split_title_half( $string, $center = 0.4 ) {
 	$length2 = strlen( $string ) * $center;
 	$tmp     = explode( ' ', $string );
 	$index   = 0;
@@ -83,11 +83,7 @@ function split_title_half( $string, $center = 0.4 ) {
 		}
 		$result[ $index ] .= $word . ' ';
 	}
-	/*
-	print $result[0];
-	print '</br>';
-	print $result[1];
-	*/
+
 	return $result;
 }
 
@@ -100,49 +96,54 @@ if ( ! function_exists( 'adler_fonts_url' ) ) :
 	 */
 	function adler_fonts_url() {
 		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin,latin-ext';
 
 		/* Translators: If there are characters in your language that are not
 		* supported by Droid Serif, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
-		$droid_serif = _x( 'on', 'Droid Serif font: on or off', 'adler_txtd' );
+		if ( 'off' !== _x( 'on', 'Droid Serif font: on or off', 'adler_txtd' ) ) {
+			$fonts[] = 'Droid Serif:400,700,400italic,700italic';
+		}
 
 		/* Translators: If there are characters in your language that are not
 		* supported by Permanent Marker, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
-		$permanent_marker = _x( 'on', 'Permanent Marker font: on or off', 'adler_txtd' );
+		if ( 'off' !== _x( 'on', 'Permanent Marker font: on or off', 'adler_txtd' ) ) {
+			$fonts[] = 'Permanent Marker:400';
+		}
 
 		/* Translators: If there are characters in your language that are not
 		* supported by Droid Sans Mono, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
-		$droid_sans_mono = _x( 'on', 'Droid Sans Mono font: on or off', 'adler_txtd' );
+		if ( 'off' !==  _x( 'on', 'Droid Sans Mono font: on or off', 'adler_txtd' ) ) {
+			$fonts[] = 'Droid Sans Mono:400';
+		}
+
+		/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
+		$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'adler_txtd' );
+
+		if ( 'cyrillic' == $subset ) {
+			$subsets .= ',cyrillic,cyrillic-ext';
+		} elseif ( 'greek' == $subset ) {
+			$subsets .= ',greek,greek-ext';
+		} elseif ( 'devanagari' == $subset ) {
+			$subsets .= ',devanagari';
+		} elseif ( 'vietnamese' == $subset ) {
+			$subsets .= ',vietnamese';
+		}
 
 
-		if ( 'off' !== $droid_serif || 'off' !== $permanent_marker || 'off' !== $droid_sans_mono) {
-			$font_families = array();
-
-			if ( 'off' !== $droid_serif ) {
-				$font_families[] = 'Droid Serif:400,700,400italic,700italic';
-			}
-
-			if ( 'off' !== $permanent_marker ) {
-				$font_families[] = 'Permanent Marker:400';
-			}
-
-			if ( 'off' !== $droid_sans_mono ) {
-				$font_families[] = 'Droid Sans Mono:400';
-			}
-
-			$query_args = array(
-				'family' => urlencode( implode( '|', $font_families ) ),
-				'subset' => urlencode( 'latin,latin-ext' ),
-			);
-
-			$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		if ( $fonts ) {
+			$fonts_url = add_query_arg( array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			), '//fonts.googleapis.com/css' );
 		}
 
 		return $fonts_url;
 	}
-endif;
+endif; ?>

@@ -5,20 +5,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'hero-content' ); ?>>
+
 		<?php
 		$hero_class   = "";
 		$hero_style   = "";
-		$split_titles = split_title_half( get_the_title() );
+		$split_titles = adler_split_title_half( get_the_title() );
 		$attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
 		$image_url        = $attachment_image[0];
 		$hero_class .= "hero_has_image";
 		$hero_style .= ' style="background-image: url(\'' . $image_url . '\')"'; ?>
+
 		<div class="hero__content">
 			<div class="hero__bg <?php echo $hero_class; ?>" <?php echo $hero_style; ?>></div>
 			<div class="hero__content-wrap content align-center">
 				<!--Create wrapper for categories and date -->
 				<div class="hero__meta">
 					<div class="hero_categories">
+
 						<?php
 						//Display the categories of the post
 						$categories = get_the_category();
@@ -30,12 +33,15 @@
 							}
 							echo trim( $output, $separator );
 						} ?>
+
 					</div>
 					<div class="hero_date">
+
 						<?php
 						//Posted date
 						the_time( get_option( 'date_format' ) );
 						?>
+
 					</div>
 				</div>
 				<!-- The title of page divided in two parts-->
@@ -45,6 +51,7 @@
 				</h1>
 
 				<div class="entry-content">
+
 					<?php
 					global $post;
 					// Check the content for the more text
@@ -54,7 +61,7 @@
 					} else {
 						the_excerpt(); ?>
 						<div class="hero_read_more">
-							<a href="<?php the_permalink(); ?>">Read More</a>
+							<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'adler_txtd' ); ?></a>
 						</div>
 					<?php
 					}
@@ -62,6 +69,7 @@
 						'before' => '<div class="page-links">' . __( 'Pages:', 'adler_txtd' ),
 						'after'  => '</div>',
 					) ); ?>
+
 				</div>
 			</div>
 			<!-- Down arrow -->

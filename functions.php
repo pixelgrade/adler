@@ -6,7 +6,6 @@
  */
 
 
-
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -65,7 +64,7 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 		add_editor_style( array( 'editor-style.css', adler_fonts_url() ) );
 
 		$defaults = array(
-			'default-color'          => '#FFF'
+			'default-color' => '#FFF'
 		);
 		add_theme_support( 'custom-background', $defaults );
 	}
@@ -91,7 +90,7 @@ function adler_scripts() {
 	}
 
 	//Default Fonts
-	wp_enqueue_style( 'hive-fonts', adler_fonts_url(), array(), null );
+	wp_enqueue_style( 'the-adler-fonts', adler_fonts_url(), array(), null );
 }
 
 add_action( 'wp_enqueue_scripts', 'adler_scripts' );

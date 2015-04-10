@@ -16,4 +16,4 @@ function the_adler_jetpack_setup() {
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', 'the_adler_jetpack_setup' );
+add_action( 'after_setup_theme', 'the_adler_jetpack_setup' ); ?>
