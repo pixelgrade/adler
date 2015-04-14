@@ -1,6 +1,6 @@
 <?php
 /**
- * @package The Adler
+ * @package Adler
  */
 ?>
 

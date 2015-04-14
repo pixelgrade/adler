@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package The Adler
+ * @package Adler
  */
 
 get_header(); ?>

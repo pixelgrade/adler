@@ -31,7 +31,7 @@
     .site-title {
 
       a {
-        color: $black;
+        color: $dark;
       }
 
     }
@@ -42,8 +42,10 @@
 
     .menu {
 
-      a {
-        color: $black;
+      li {
+          a {
+            color: $dark;
+          }
       }
 
     }
@@ -259,7 +261,6 @@
         color: #0E3650;
         display: block;
         right: 0;
-
       }
       transform: rotate(-45deg);
     }
@@ -303,8 +304,6 @@
   }
 }
 
-
-
   #primary-menu {
     @include query-below($lap) {
 
@@ -321,8 +320,6 @@
       top: 0;
       left: 0;
       z-index: -1;
-
-
     }
 
   }

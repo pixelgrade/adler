@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package The Adler
+ * @package Adler
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :

@@ -3,7 +3,7 @@
         @extend %entry-wrapper;
         .page-header {
             .page-title {
-                    @extend %blockquote;
+                    @extend blockquote;
             }
         }
         article {
