@@ -67,9 +67,15 @@
       }
 
       .entry-footer {
+       display: flex;
+       justify-content: space-between;
+
         .entry-meta {
-          display: flex;
-          float: left;
+       
+          
+          > * {
+            display: inline-block;
+          }
 
           .hero_categories {
 
@@ -88,7 +94,6 @@
         }
 
         .comments-link {
-          float: right;
             i {
               padding-right: 5px;
             }

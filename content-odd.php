@@ -43,7 +43,7 @@ $split_titles = adler_split_title_half( get_the_title() );
 
 						<?php the_adler_posted_on(); ?>
 
-					</div><!-- .entry-meta -->
+					</div>
 
 				<?php endif; ?>
 
