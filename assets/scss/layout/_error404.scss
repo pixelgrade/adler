@@ -4,7 +4,7 @@
     .error-404 {
       .page-header {
         .page-title {
-          @extend %blockquote;
+          @extend blockquote;
         }
       }
     }

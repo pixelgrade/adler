@@ -6,7 +6,7 @@
   @extend %hyphening;
 }
 
-%blockquote {
+blockquote {
   @extend %beta;
   font-size: 45px;
   text-align: center;
@@ -48,7 +48,7 @@
   .page-header {
     .page-title {
       h1 {
-        @extend %blockquote;
+        @extend blockquote;
       }
     }
   }

@@ -5,7 +5,7 @@
       .no-results {
         .page-header {
           .page-title {
-            @extend %blockquote;
+            @extend blockquote;
           }
         }
       }
