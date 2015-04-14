@@ -53,7 +53,11 @@
   }
 
 }
-
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
 .main-navigation {
   width: 80%;
   float: right;
@@ -81,7 +85,6 @@
     }
    &::focus {
      border-color: none !important;
-
    }
   }
 
@@ -218,14 +221,17 @@
   @extend .nav--stacked;
 
   @include query-below($lap){
-    top:0;
-    left:50%;
+    position: relative;
+    top:100%;
+    left:51%;
     padding-left: 10px;
     z-index: 1;
     background-color: #FFF;
-    border: 1px solid #0E3650;
-
+    width: 100%;
+    display:block;
+    margin-bottom: 0;
   }
+
   position: absolute;
   top: 100%;
   left: 50%;
@@ -256,19 +262,33 @@
     position: relative;
 
     &:after {
-      right: 10px;
+      right: 10%;
+
       @include query-below($lap){
         color: #0E3650;
         display: block;
-        right: 0;
+        right: 10%;
+
       }
+
       transform: rotate(-45deg);
+    }
+    .sub-menu {
+      .menu-item {
+        @include query-below($lap) {
+          font-size: 10px;
+        }
+      }
+    }
+    @include query-below($lap){
+      font-size: 10px;
     }
   }
 
+
   .sub-menu {
     left: 0;
-    top: 5%;
+    top: 100%;
     transform: translateX(0);
   }
 }
@@ -311,7 +331,9 @@
     }
   }
 
-  .menu-all-pages-container {
+  .menu-main-menu-container {
+
+    display:block;
 
     @include query-below($lap) {
       background-color: #FFFFFF;
