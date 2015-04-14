@@ -25,12 +25,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     plugin adds the posiblity of using an image as website logo (instead of Site Title).
 
 == Changelog
-    1.0 Submitted theme on http://www.wordpress.org
-    1.1 Improvements on style and file structure
-    1.2 Added add_theme_support("custom-background") on functions.php in order to be able to change the background.
-        Changed theme text domain.
-        Removed unused files.
-        Implemented title tag.
-        Added footer widgets areas.
-        Fixed text domain for strings.
-        Fixed responsive menu.
+    1.0.1 Submitted theme on http://www.wordpress.org
+    1.0.1 Improvements on style and file structure
+    1.0.2 Added add_theme_support("custom-background") on functions.php in order to be able to change the background.
+          Changed theme text domain.
+          Removed unused files.
+          Implemented title tag.
+          Added footer widgets areas.
+          Fixed responsive menu.
+    1.0.3 Fixed text domain for strings.
+          Added changelog file.
+          Added Edit option on single posts
+          Fixed Down Arrow on Firefox
