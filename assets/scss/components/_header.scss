@@ -307,6 +307,7 @@
 
   #primary-menu {
     @include query-below($lap) {
+
       display: none;
     }
   }

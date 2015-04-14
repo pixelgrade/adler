@@ -25,14 +25,14 @@
 			<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'adler_txtd' ),
+				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'adler' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 			?>
 
 			<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'adler_txtd' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'adler' ),
 				'after'  => '</div>',
 			) );
 			?>

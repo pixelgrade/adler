@@ -29,7 +29,7 @@
 						$output     = '';
 						if ( $categories ) {
 							foreach ( $categories as $category ) {
-								$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler_txtd' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+								$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 							}
 							echo trim( $output, $separator );
 						} ?>
@@ -57,16 +57,16 @@
 					// Check the content for the more text
 					$has_more = strpos( $post->post_content, '<!--more' );
 					if ( $has_more ) {
-						the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'adler_txtd' ) );
+						the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'adler' ) );
 					} else {
 						the_excerpt(); ?>
 						<div class="hero_read_more">
-							<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'adler_txtd' ); ?></a>
+							<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'adler' ); ?></a>
 						</div>
 					<?php
 					}
 					wp_link_pages( array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'adler_txtd' ),
+						'before' => '<div class="page-links">' . __( 'Pages:', 'adler' ),
 						'after'  => '</div>',
 					) ); ?>
 

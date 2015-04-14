@@ -20,15 +20,15 @@ if ( ! function_exists( 'the_posts_navigation' ) ) :
 		}
 		?>
 		<nav class="navigation posts-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'adler_txtd' ); ?></h2>
+			<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'adler' ); ?></h2>
 			<div class="nav-links">
 
 				<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'adler_txtd' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'adler' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'adler_txtd' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'adler' ) ); ?></div>
 				<?php endif; ?>
 
 			</div><!-- .nav-links -->
@@ -53,7 +53,7 @@ if ( ! function_exists( 'the_post_navigation' ) ) :
 		}
 		?>
 		<nav class="navigation post-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'adler_txtd' ); ?></h2>
+			<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'adler' ); ?></h2>
 			<div class="nav-links">
 				<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
@@ -79,7 +79,7 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 			$output     = '';
 			if ( $categories ) {
 				foreach ( $categories as $category ) {
-					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler_txtd' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'adler' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 				}
 				echo trim( $output, $separator );
 			} ?>
@@ -101,7 +101,7 @@ if ( ! function_exists( 'the_adler_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			_x( '%s', 'post date', 'adler_txtd' ),
+			_x( '%s', 'post date', 'adler' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -117,25 +117,25 @@ if ( ! function_exists( 'the_adler_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' == get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( __( ', ', 'adler_txtd' ) );
+			$categories_list = get_the_category_list( __( ', ', 'adler' ) );
 			if ( $categories_list && the_adler_categorized_blog() ) {
-				printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'adler_txtd' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'adler' ) . '</span>', $categories_list );
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', __( ', ', 'adler_txtd' ) );
+			$tags_list = get_the_tag_list( '', __( ', ', 'adler' ) );
 			if ( $tags_list && is_single()) {
-				printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'adler_txtd' ) . '</span>', $tags_list );
+				printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'adler' ) . '</span>', $tags_list );
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link"> <i class="fa fa-comments"></i>';
-			comments_popup_link( __( 'Leave a comment', 'adler_txtd' ), __( '1 Comment', 'adler_txtd' ), __( '% Comments', 'adler_txtd' ) );
+			comments_popup_link( __( 'Leave a comment', 'adler' ), __( '1 Comment', 'adler' ), __( '% Comments', 'adler' ) );
 			echo '</span>';
 		}
 
-		//edit_post_link( __( 'Edit', 'adler_txtd' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( __( 'Edit', 'adler' ), '<span class="edit-link">', '</span>' );
 	}
 endif;
 
@@ -152,45 +152,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 	 */
 	function the_archive_title( $before = '', $after = '' ) {
 		if ( is_category() ) {
-			$title = sprintf( __( 'Category: %s', 'adler_txtd' ), single_cat_title( '', false ) );
+			$title = sprintf( __( 'Category: %s', 'adler' ), single_cat_title( '', false ) );
 		} elseif ( is_tag() ) {
-			$title = sprintf( __( 'Tag: %s', 'adler_txtd' ), single_tag_title( '', false ) );
+			$title = sprintf( __( 'Tag: %s', 'adler' ), single_tag_title( '', false ) );
 		} elseif ( is_author() ) {
-			$title = sprintf( __( 'Author: %s', 'adler_txtd' ), '<span class="vcard">' . get_the_author() . '</span>' );
+			$title = sprintf( __( 'Author: %s', 'adler' ), '<span class="vcard">' . get_the_author() . '</span>' );
 		} elseif ( is_year() ) {
-			$title = sprintf( __( 'Year: %s', 'adler_txtd' ), get_the_date( _x( 'Y', 'yearly archives date format', 'adler_txtd' ) ) );
+			$title = sprintf( __( 'Year: %s', 'adler' ), get_the_date( _x( 'Y', 'yearly archives date format', 'adler' ) ) );
 		} elseif ( is_month() ) {
-			$title = sprintf( __( 'Month: %s', 'adler_txtd' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'adler_txtd' ) ) );
+			$title = sprintf( __( 'Month: %s', 'adler' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'adler' ) ) );
 		} elseif ( is_day() ) {
-			$title = sprintf( __( 'Day: %s', 'adler_txtd' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'adler_txtd' ) ) );
+			$title = sprintf( __( 'Day: %s', 'adler' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'adler' ) ) );
 		} elseif ( is_tax( 'post_format' ) ) {
 			if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-				$title = _x( 'Asides', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Asides', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-				$title = _x( 'Galleries', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Galleries', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-				$title = _x( 'Images', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Images', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-				$title = _x( 'Videos', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Videos', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-				$title = _x( 'Quotes', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Quotes', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-				$title = _x( 'Links', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Links', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-				$title = _x( 'Statuses', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Statuses', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-				$title = _x( 'Audio', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Audio', 'post format archive title', 'adler' );
 			} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-				$title = _x( 'Chats', 'post format archive title', 'adler_txtd' );
+				$title = _x( 'Chats', 'post format archive title', 'adler' );
 			}
 		} elseif ( is_post_type_archive() ) {
-			$title = sprintf( __( 'Archives: %s', 'adler_txtd' ), post_type_archive_title( '', false ) );
+			$title = sprintf( __( 'Archives: %s', 'adler' ), post_type_archive_title( '', false ) );
 		} elseif ( is_tax() ) {
 			$tax = get_taxonomy( get_queried_object()->taxonomy );
 			/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-			$title = sprintf( __( '%1$s: %2$s', 'adler_txtd' ), $tax->labels->singular_name, single_term_title( '', false ) );
+			$title = sprintf( __( '%1$s: %2$s', 'adler' ), $tax->labels->singular_name, single_term_title( '', false ) );
 		} else {
-			$title = __( 'Archives', 'adler_txtd' );
+			$title = __( 'Archives', 'adler' );
 		}
 
 		/**

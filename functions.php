@@ -40,8 +40,8 @@ if ( ! function_exists( 'the_adler_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'adler_txtd' ),
-			'footer'  => __( 'Footer Menu', 'adler_txtd' )
+			'primary' => __( 'Primary Menu', 'adler' ),
+			'footer'  => __( 'Footer Menu', 'adler' )
 		) );
 
 		/*
@@ -99,27 +99,27 @@ add_action( 'wp_enqueue_scripts', 'adler_scripts' );
 
 function adler_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Left Footer', 'adler_txtd' ),
+		'name' => __( 'Left Footer', 'adler' ),
 		'id' => 'sidebar-left',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler' ),
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name' => __( 'Right Footer', 'adler_txtd' ),
+		'name' => __( 'Right Footer', 'adler' ),
 		'id' => 'sidebar-right',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler' ),
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name' => __( 'Center Footer', 'adler_txtd' ),
+		'name' => __( 'Center Footer', 'adler' ),
 		'id' => 'sidebar-center',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler_txtd' ),
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler' ),
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<h2 class="widget-title">',

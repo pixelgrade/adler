@@ -49,7 +49,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 
 		// Add a page number if necessary:
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'adler_txtd' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'adler' ), max( $paged, $page ) );
 		}
 
 		return $title;
@@ -103,7 +103,7 @@ if ( ! function_exists( 'adler_fonts_url' ) ) :
 		* supported by Droid Serif, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
-		if ( 'off' !== _x( 'on', 'Droid Serif font: on or off', 'adler_txtd' ) ) {
+		if ( 'off' !== _x( 'on', 'Droid Serif font: on or off', 'adler' ) ) {
 			$fonts[] = 'Droid Serif:400,700,400italic,700italic';
 		}
 
@@ -111,7 +111,7 @@ if ( ! function_exists( 'adler_fonts_url' ) ) :
 		* supported by Permanent Marker, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
-		if ( 'off' !== _x( 'on', 'Permanent Marker font: on or off', 'adler_txtd' ) ) {
+		if ( 'off' !== _x( 'on', 'Permanent Marker font: on or off', 'adler' ) ) {
 			$fonts[] = 'Permanent Marker:400';
 		}
 
@@ -119,12 +119,12 @@ if ( ! function_exists( 'adler_fonts_url' ) ) :
 		* supported by Droid Sans Mono, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
-		if ( 'off' !==  _x( 'on', 'Droid Sans Mono font: on or off', 'adler_txtd' ) ) {
+		if ( 'off' !==  _x( 'on', 'Droid Sans Mono font: on or off', 'adler' ) ) {
 			$fonts[] = 'Droid Sans Mono:400';
 		}
 
 		/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
-		$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'adler_txtd' );
+		$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'adler' );
 
 		if ( 'cyrillic' == $subset ) {
 			$subsets .= ',cyrillic,cyrillic-ext';
