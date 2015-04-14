@@ -37,7 +37,13 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<?php _e( '', 'adler' ); ?>
 			</button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+				'container_class' => 'main-menu-container',
+
+
+			) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
