@@ -9,9 +9,10 @@
 .content-area {
   .site-main {
     .posts-navigation {
-      display: inline-block;
-      width: 300px;
+      @extend .entry-wrapper;
+      margin-top: 40px;
     }
+
     nav {
       .nav-links {
         display: block;
