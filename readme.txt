@@ -37,3 +37,4 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
           Added changelog file.
           Added Edit option on single posts
           Fixed Down Arrow on Firefox
+    1.0.4 Fixed JavaScript console error
