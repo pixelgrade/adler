@@ -12,3 +12,4 @@ Changelog
           Added Edit option on single posts
           Fixed Down Arrow on Firefox
     1.0.4 Fixed JavaScript console error
+    1.0.5

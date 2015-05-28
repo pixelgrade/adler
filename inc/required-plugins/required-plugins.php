@@ -1,7 +1,7 @@
 <?php
 
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
-add_action( 'tgmpa_register', 'wpgrade_register_required_plugins', 999 );
+add_action( 'adler_register', 'wpgrade_register_required_plugins', 999 );
 
 function wpgrade_register_required_plugins() {
 
@@ -26,7 +26,7 @@ function wpgrade_register_required_plugins() {
 			'name'               => 'Customify',
 			'slug'               => 'customify',
 			'required'           => false,
-			'version'            => '1.1.0',
+			'version'            => '1.1.1',
 			'force_activation'   => false,
 			'force_deactivation' => true,
 		),
@@ -72,6 +72,6 @@ function wpgrade_register_required_plugins() {
 		)
 	);
 
-	tgmpa( $plugins, $config );
+	adler( $plugins, $config );
 
 } ?>
