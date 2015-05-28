@@ -16,7 +16,7 @@
 		<?php if ( 'post' == get_post_type() ) : ?>
 
 			<div class="entry-meta">
-				<?php the_adler_posted_on(); ?>
+				<?php adler_posted_on(); ?>
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>
@@ -30,7 +30,7 @@
 
 	<footer class="entry-footer">
 
-		<?php the_adler_entry_footer(); ?>
+		<?php adler_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

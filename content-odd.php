@@ -41,13 +41,13 @@ $split_titles = adler_split_title_half( get_the_title() );
 
 					<div class="entry-meta">
 
-						<?php the_adler_posted_on(); ?>
+						<?php adler_posted_on(); ?>
 
 					</div>
 
 				<?php endif; ?>
 
-				<?php the_adler_entry_footer(); ?>
+				<?php adler_entry_footer(); ?>
 
 			</footer>
 		</div><!-- .entry-footer -->

@@ -68,7 +68,7 @@ if ( ! function_exists( 'adler_setup' ) ) :
 		);
 		add_theme_support( 'custom-background', $defaults );
 	}
-endif; // the_adler_setup
+endif; // adler_setup
 add_action( 'after_setup_theme', 'adler_setup' );
 
 /**

@@ -20,7 +20,7 @@
 
 		<footer class="entry-footer">
 
-			<?php the_adler_entry_footer(); ?>
+			<?php adler_entry_footer(); ?>
 
 		</footer><!-- .entry-footer -->
 	</div>
