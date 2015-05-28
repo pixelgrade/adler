@@ -39,3 +39,5 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
           Fixed Down Arrow on Firefox
     1.0.4 Fixed JavaScript console error
     1.0.5
+
+    Screenshot Credits: https://static.pexels.com/photos/3180/man-person-fog-mist.jpg
