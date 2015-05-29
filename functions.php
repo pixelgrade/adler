@@ -99,32 +99,15 @@ add_action( 'wp_enqueue_scripts', 'adler_scripts' );
 
 function adler_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Left Footer', 'adler' ),
-		'id' => 'sidebar-left',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler' ),
+		'name' => __( 'Footer Area', 'adler' ),
+		'id' => 'footer-area',
+		'description' => __( 'Widgets in this area will be shown in the footer of the page.', 'adler' ),
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name' => __( 'Right Footer', 'adler' ),
-		'id' => 'sidebar-right',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler' ),
-		'before_widget' => '<li id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</li>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name' => __( 'Center Footer', 'adler' ),
-		'id' => 'sidebar-center',
-		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'adler' ),
-		'before_widget' => '<li id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</li>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+
 }
 
 add_action( 'widgets_init', 'adler_widgets_init' );
