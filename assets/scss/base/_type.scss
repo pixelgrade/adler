@@ -44,10 +44,6 @@ a {
   color: currentColor;
   @extend %link;
   transition: all 0.2s;
-
-  &:hover {
-    // border-bottom-color: $gray;
-  }
 }
 
 /* Headings */
