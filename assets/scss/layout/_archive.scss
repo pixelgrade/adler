@@ -39,7 +39,7 @@
     .main-wrapper {
       position: relative;
       background-color: #f7f7f7;
-      padding: 50px 50px 100px 50px;
+      padding: 50px 50px 70px 50px;
       margin: -50px -50px 0 -50px;
 
       @include query-below($small){
@@ -47,11 +47,26 @@
         margin: 0;
       }
 
+      &:after {
+        content: ' ';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+
+        background: url(assets/images/leaf.png) center center no-repeat;
+        background-color: #fff;
+        // background-size: 28px 60px;
+      }
+
       .entry__read-more {
-        width: 100px;
-        background-color: $accent;
+        width: 105px;
+       
         text-align: center;
-        margin-bottom: 55px;
+        margin-bottom: 35px;
         margin-left: auto;
         margin-right: auto;
 
@@ -60,8 +75,12 @@
         }
 
         a {
+          display: block;
+          line-height: 44px;
           border-bottom: none;
           color: $dark;
+          background: url(assets/images/more-bg.png);
+          background-size: cover;
         }
 
       }
@@ -122,8 +141,20 @@
 
     .main-wrapper {
       background-color: $white;
+
+      &:after {
+        background-color: #f7f7f7;
+      }
     }
 
+  }
+
+  &.even-post:last-child {
+
+      .main-wrapper:after {
+        display: none;
+      }
+    
   }
 
 }
