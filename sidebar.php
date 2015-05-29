@@ -11,7 +11,7 @@
 
         <div id="footer-sidebar" class="footer-area widget-area" role="complementary">
             <?php dynamic_sidebar('footer-area'); ?>
-        </div><!-- #left-sidebar -->
+        </div><!-- #footer-sidebar -->
 
     <?php endif; ?>
 

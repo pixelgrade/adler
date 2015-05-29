@@ -22,25 +22,30 @@
 .widgets-area {
   text-align: center;
   list-style: none;
+
+
+
   @extend %no-bullets;
   .widget-area {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
 
+    @include query-below($small) {
+      flex-direction: column;
+    }
     .widget {
-      width: 33.3%;
-      float: left;
+      flex-basis: 30%;
       padding: 10px 60px;
-      display: inline-block;
-      min-height: 150px;
+
 
       ul {
         padding-left: 0px;
       }
-      @include query-below($small) {
-        margin: 0 auto;
-        width: 100%;
-        min-height: 0;
-      }
+
     }
   }
   #footer-sidebar {
@@ -49,7 +54,7 @@
       .menu-main-menu-container {
         ul.menu {
           margin: 0 auto;
-          margin-left: -40px;
+
           li.menu-item a {
             @extend %li-style;
           }
@@ -58,7 +63,6 @@
     }
     .widget_recent_comments {
       ul {
-        margin-left: -40px;
         margin-bottom: 0px;
         li.recentcomments {
           a {
@@ -69,7 +73,6 @@
     }
     .widget_pages {
       ul {
-        margin-left: -40px;
         li {
           a {
             @extend %li-style;
@@ -117,7 +120,6 @@
     .widget_meta {
       ul {
         margin: 0 auto;
-        margin-left: -40px;
         @extend %no-bullets;
         li {
           a {
@@ -133,7 +135,6 @@
     .widget_recent_entries {
       ul {
         margin: 0 auto;
-        margin-left: -40px;
         @extend %no-bullets;
         li {
           a {
@@ -153,7 +154,6 @@
       }
       ul {
         margin: 0 auto;
-        margin-left: -40px;
         li {
           margin-bottom: 5px;
           background-color: $lightest;

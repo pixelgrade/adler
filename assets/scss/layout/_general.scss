@@ -16,7 +16,18 @@ blockquote {
   margin-right: -225px;
   margin-bottom: 50px;
   position: relative;
+   @extend %hyphening;
 
+    @include query-below($small){
+      max-width: 100%;
+      margin:20px 40px;
+      font-size: 20px;
+      p {
+        background-size: 15px 32px;
+        background-color: #68f3c8;
+        background-image: linear-gradient(white 70%, transparent 70%, transparent);
+      }
+  }
 
   & > * {
     display: inline;
