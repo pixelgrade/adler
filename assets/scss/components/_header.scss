@@ -137,14 +137,14 @@ button {
   .no-site-title {
     display: none;
   }
+}
 
-  a {
+  .site-title a {
     text-decoration: none;
     border-bottom: 0;
     color: $lightest;
     @extend %gama;
   }
-}
 
 .header-content {
   position: relative;
