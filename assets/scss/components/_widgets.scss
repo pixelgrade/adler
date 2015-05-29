@@ -29,8 +29,9 @@
     .widget {
       width: 33.3%;
       float: left;
+      padding: 10px 60px;
       display: inline-block;
-      min-height: 300px;
+      min-height: 150px;
 
       ul {
         padding-left: 0px;
@@ -42,7 +43,7 @@
       }
     }
   }
-  .left-sidebar, .center-sidebar, .right-sidebar {
+  #footer-sidebar {
     @extend %header;
     .widget_nav_menu {
       .menu-main-menu-container {
@@ -78,8 +79,9 @@
     }
     .widget_calendar {
       #calendar_wrap {
-        table#wp-calendar {
+        #wp-calendar {
           background-color: $lightest;
+          min-width: 250px;
           margin: 0 auto;
           caption {
             color: $black;
