@@ -32,7 +32,9 @@ body {
   -moz-hyphens: auto;
   hyphens: auto;
 }
-
+div {
+  @extend %hyphening;
+}
 /* Links */
 
 %link {
@@ -84,6 +86,7 @@ h4 {
 p {
   margin-top: 0;
   margin-bottom: 40px;
+  @extend %hyphening;
 }
 
 b,
