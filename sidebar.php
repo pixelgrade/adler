@@ -7,23 +7,13 @@
 
 ?>
 <div class="widgets-area"><?php
-    if (is_active_sidebar('sidebar-left')) : ?>
+    if (is_active_sidebar('footer-area')) : ?>
 
-        <div id="left-sidebar" class="left-sidebar widget-area" role="complementary">
-            <?php dynamic_sidebar('sidebar-left'); ?>
+        <div id="footer-sidebar" class="footer-area widget-area" role="complementary">
+            <?php dynamic_sidebar('footer-area'); ?>
         </div><!-- #left-sidebar -->
 
-    <?php endif;
-
-    if (is_active_sidebar('sidebar-center')) : ?>
-        <div id="center-sidebar" class="center-sidebar widget-area" role="complementary">
-            <?php dynamic_sidebar('sidebar-center'); ?>
-        </div><!-- #center-sidebar -->
-    <?php endif;
-
-    if (is_active_sidebar('sidebar-right')) : ?>
-        <div id="right-sidebar" class="right-sidebar widget-area" role="complementary">
-            <?php dynamic_sidebar('sidebar-right'); ?>
-        </div><!-- #right-sidebar -->
     <?php endif; ?>
+
+
 </div><!-- .widgets-area -->
