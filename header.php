@@ -25,7 +25,7 @@
 				$main_logo_url = adler::get_customify_option( 'main_logo' );
 				?>
 				<?php if ( ! empty( $main_logo_url ) ) { ?>
-					<?php echo esc_url('<img src="' . $main_logo_url . '"/>'); ?>
+					<img src="<?php echo esc_url($main_logo_url); ?>"/>
 				<?php } else { ?>
 					<h1 class="site-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
