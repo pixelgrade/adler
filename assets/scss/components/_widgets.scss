@@ -24,15 +24,24 @@
   list-style: none;
   @extend %no-bullets;
   .widget-area {
-    width: 33.3%;
-    float: left;
+    width: 100%;
 
-    @include query-below($lap) {
-      float: none;
-      margin:0 auto;
+    .widget {
+      width: 33.3%;
+      float: left;
+      display: inline-block;
+      min-height: 300px;
+
+      ul {
+        padding-left: 0px;
+      }
+      @include query-below($small) {
+        margin: 0 auto;
+        width: 100%;
+        min-height: 0;
+      }
     }
   }
-
   .left-sidebar, .center-sidebar, .right-sidebar {
     @extend %header;
     .widget_nav_menu {
