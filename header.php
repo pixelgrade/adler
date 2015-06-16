@@ -45,6 +45,7 @@
 
 			) ); ?>
 		</nav><!-- #site-navigation -->
+		<?php get_template_part( 'templates/toolbar' ); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
