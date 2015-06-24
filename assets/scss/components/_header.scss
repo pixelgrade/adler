@@ -1,5 +1,5 @@
 .site-header {
-  width: 100%;
+  width: 99%;
   height: 80px;
   margin-bottom: 20px;
   padding: 20px 40px;
@@ -294,6 +294,7 @@ button {
 
 .menu-item-has-children, .page_item_has_children {
   position: relative;
+  margin-right: 20px !important;
 
   &:hover:after {
     border-color: $accent;
@@ -306,7 +307,6 @@ button {
     top: 50%;
     right: -10px;
 
-    margin-top: -2px;
     display: inline-block;
 
     width: 5px;
