@@ -33,6 +33,7 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
+    word-break: break-word;
 
     @include query-below($small) {
       flex-direction: column;

@@ -8,6 +8,7 @@
 	bottom: 0;
 	display: block;
     padding-top: 7px;
+    overflow: hidden;
 
 	.admin-bar & {
 		margin-top: 32px;
@@ -44,6 +45,9 @@
 		z-index: 20;
 	}
 
+  @include query-below($lap) {
+	display: none;
+  }
 }
 
 .toolbar__head {

@@ -1,6 +1,9 @@
 <div class="toolbar">
 	<div class="toolbar__head">
 		<nav id="social-navigation" class="toolbar-navigation" role="navigation">
+			<ul class="nav  nav--toolbar">
+				<li class="nav__item--search"><a href="#"><?php _e( 'Search', 'adler' ); ?></a></li>
+			</ul>
 			<h5 class="screen-reader-text"><?php _e( 'Social navigation', 'adler' ); ?></h5>
 			<?php
 			wp_nav_menu(
@@ -12,9 +15,7 @@
 				)
 			);
 			?>
-			<ul class="nav  nav--toolbar">
-				<li class="nav__item--search"><a href="#"><?php _e( 'Search', 'adler' ); ?></a></li>
-			</ul>
+
 		</nav>
 		<!-- #social-navigation -->
 	</div>
