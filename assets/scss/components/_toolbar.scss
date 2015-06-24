@@ -1,11 +1,13 @@
 .toolbar {
 	@include rhythm(padding-right, 1);
-	@include rhythm(width, 5);
-	position: fixed;
+	@include rhythm(width, 6);
+	position: absolute;
 	@include rhythm(top, 1);
+  	@include rhythm(min-height, 28);
 	right: 0;
 	bottom: 0;
 	display: block;
+    padding-top: 7px;
 
 	.admin-bar & {
 		margin-top: 32px;
@@ -45,9 +47,7 @@
 }
 
 .toolbar__head {
-	@include rhythm(padding-top, 2);
 	@include rhythm(padding-bottom, 2);
-	@include rhythm(min-height, 28);
 
 	@include query-below($desk) {
 		@include query-above(1000px) {
@@ -100,6 +100,7 @@
 		position: relative;
 		right: 100%;
 		white-space: nowrap;
+	    color: transparent !important;
 
 		// prepare hover state
 		border: 1px solid transparent;
@@ -111,15 +112,17 @@
 		pointer-events: none;
 
 		&:before {
-			content: "";
-			font-size: (19/14) + em;
-			display: inline-block;
-			@include rhythm(width, 4, 19px);
-			@include rhythm(height, 3, 19px);
-			@include rhythm(line-height, 3, 19px);
+		  content: "";
+		  font-size: (19/14) + em;
+		  display: inline-block;
+		  @include rhythm(width, 4, 19px);
+		  @include rhythm(height, 3, 19px);
+		  @include rhythm(line-height, 3, 19px);
 
-			position: absolute;
-			@include rhythm(right, -4, 19px);
+		  position: absolute;
+		  @include rhythm(right, -4, 19px);
+
+
 
 			@include query-above($lap){
 				// because of position absolute, the gap between text and icon
@@ -136,22 +139,25 @@
 //			visibility: visible;
 			pointer-events: auto;
 			color: $black;
+		  	-webkit-transition: color .1s;
+		  	-moz-transition: color .1s;
+		  	-o-transition: color .1s;
+			transition: color .1s;
 		}
 
-		/*@include query-above(1000px) {
+	  @include query-above(1000px) {
 
-			&:hover {
-				// show background and borders
-				background: white;
-				border-color: $gray;
-
-				// overwrite set to hide labels
-				color: $gray;
-				visibility: visible;
-				pointer-events: auto;
+		&:hover {
+		  @include query-above(1000px) {
+			&:before {
+			  // overwrite set to hide labels
+			  color: $accent !important;
+			  visibility: visible;
+			  pointer-events: auto;
 			}
-		}*/
-
+		  }
+		}
+	  }
 		// default share icon used as a fallback
 		&:before                        {content: $fa-var-share-alt;}
 		// now for the social services that are in FA
@@ -311,4 +317,8 @@
 		@include rhythm(top, 4);
 		@include rhythm(right, 3);
 	}
+}
+
+#social-navigation ul {
+  margin-bottom: 0;
 }
