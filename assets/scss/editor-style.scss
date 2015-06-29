@@ -167,6 +167,10 @@ body.wp-editor {
 	&.alignright     { @extend .alignright; }
 	&.aligncenter    { @extend .aligncenter; }
 	&.alignnone      { @extend .alignnone; }
+
+  @include query-below() {
+
+  }
 }
 
 #wp-image-toolbar {

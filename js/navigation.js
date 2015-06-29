@@ -52,4 +52,13 @@ jQuery(document).ready(function ($) {
         }, 500);
         return false;
     });
+
+    $(".nav__item--search").click(function(){
+        $(".overlay--search").fadeToggle("fast","linear");
+
+    });
+    $(".overlay__close").click(function() {
+        $(".overlay--search").fadeToggle("fast","linear");
+    });
 });
+

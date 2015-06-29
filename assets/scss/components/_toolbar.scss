@@ -37,7 +37,7 @@
 		z-index: 20;
 	}
 
-  @include query-below($lap) {
+  @include query-below(1000px) {
 	display: none;
   }
 }
@@ -219,9 +219,9 @@
 	}
 }
 .overlay--search {
-	display: table;
+	display: none;
 	position: fixed;
-	top: 0; left: 100%;
+	top: 0; left: 0%;
 	z-index: 101;
 	@include rhythm(padding-right, 20);
 	@include rhythm(padding-left, 20);
@@ -278,8 +278,8 @@
 	}
 }
 .overlay__wrapper {
-	display: table-cell;
-	vertical-align: middle;
+	position: absolute;
+    top: 50%;
 }
 .overlay__close {
 	@include rhythm(width, 5);
