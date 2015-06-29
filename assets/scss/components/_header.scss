@@ -50,7 +50,9 @@
     }
 
   }
-
+ .nav--toolbar a:before {
+   color: $dark;
+ }
 }
 button {
   &:focus {
