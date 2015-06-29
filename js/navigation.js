@@ -45,6 +45,7 @@
     };
 })();
 
+
 jQuery(document).ready(function ($) {
     $(".arrow-wrap").click(function() {
         $('html, body').animate({
@@ -53,12 +54,19 @@ jQuery(document).ready(function ($) {
         return false;
     });
 
+    /* Search */
+
     $(".nav__item--search").click(function(){
         $(".overlay--search").fadeToggle("fast","linear");
 
     });
     $(".overlay__close").click(function() {
         $(".overlay--search").fadeToggle("fast","linear");
+    });
+
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27)
+            $('.overlay--search').fadeToggle("fast","linear");
     });
 });
 

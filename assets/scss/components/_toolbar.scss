@@ -242,6 +242,7 @@
 	.search-form > label {
 		position: static;
 		height: auto;
+	   @extend %beta;
 	}
 	.search-form, .search-field {
 		display: block;
@@ -279,7 +280,7 @@
 }
 .overlay__wrapper {
 	position: absolute;
-    top: 50%;
+    top: 33%;
 }
 .overlay__close {
 	@include rhythm(width, 5);
