@@ -286,8 +286,8 @@
 	@include rhythm(width, 5);
 	@include rhythm(height, 5);
 	position: absolute;
-	@include rhythm(top, 8);
-	@include rhythm(right, 5);
+	@include rhythm(top, 2.6);
+	@include rhythm(right, 2.6);
 	cursor: pointer;
 	&:before, &:after {
 		content: "";

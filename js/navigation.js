@@ -57,16 +57,16 @@ jQuery(document).ready(function ($) {
     /* Search */
 
     $(".nav__item--search").click(function(){
-        $(".overlay--search").fadeToggle("fast","linear");
+        $(".overlay--search").fadeIn("fast");
 
     });
     $(".overlay__close").click(function() {
-        $(".overlay--search").fadeToggle("fast","linear");
+        $(".overlay--search").fadeOut("fast");
     });
 
     $(document).keyup(function(e) {
         if (e.keyCode == 27)
-            $('.overlay--search').fadeToggle("fast","linear");
+            $('.overlay--search').fadeOut("fast");
     });
 });
 
