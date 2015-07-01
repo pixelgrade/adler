@@ -85,7 +85,16 @@ blockquote {
     overflow: hidden;
   }
 }
+%logo-settings-mobile {
 
+  a img {
+
+    @include query-below($lap) {
+      max-width: 90px;
+      max-height: 90px;
+    }
+  }
+}
 /* Layouts */
 
 .entry-wrapper {

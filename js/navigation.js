@@ -64,6 +64,11 @@ jQuery(document).ready(function ($) {
         $(".overlay--search").fadeOut("fast");
     });
 
+    $(".menu-toggle").click(function() {
+        $(".toolbar").toggle();
+    });
+
+
     $(document).keyup(function(e) {
         if (e.keyCode == 27)
             $('.overlay--search').fadeOut("fast");

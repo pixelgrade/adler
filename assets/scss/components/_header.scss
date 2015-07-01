@@ -7,8 +7,16 @@
   z-index: 50;
   top: 0;
   left: 0;
-}
 
+  @include query-below($lap) {
+    width: 100%;
+  }
+  .nav--toolbar a:before {
+    @include query-below($lap) {
+      color: $dark;
+    }
+  }
+}
 .no-thumbnail {
 
   .site-header {
@@ -26,6 +34,8 @@
   .site-branding {
 
     @extend %logo-settings;
+
+    @extend %logo-settings-mobile;
 
     .site-title {
 
@@ -54,11 +64,13 @@
    color: $dark;
  }
 }
+
 button {
   &:focus {
     outline: none !important;
   }
 }
+
 .main-navigation {
   width: 80%;
   float: right;
@@ -124,9 +136,9 @@ button {
   text-align: left;
   margin-top: 10px;
 
-  .logo {
-    @extend %logo-settings;
-  }
+  @extend %logo-settings;
+
+  @extend %logo-settings-mobile;
 
   .site-title {
     font-size: 14px;
@@ -296,7 +308,7 @@ button {
 
 .menu-item-has-children, .page_item_has_children {
   position: relative;
-  margin-right: 20px !important;
+  margin-right: 20px;
 
   &:hover:after {
     border-color: $accent;
