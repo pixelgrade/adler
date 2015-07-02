@@ -29,15 +29,18 @@
 	@include query-below($lap) {
 	  	display: none;
 		position: absolute;
-		width: 77px;
-		padding: 0;
-	    top: 70px;
-
+		max-width: 900px;
+		width: 100%;
+	  	padding: 0;
+		overflow: visible;
+		max-height: 100px;
+	    min-height: 50px;
+		background-color: $white;
 
 	  .toolbar__head {
-		text-align: left;
+		text-align: center;
 		margin: 0;
-		width: 40px;
+		width: 100%;
 	  }
 
 	  ul {
