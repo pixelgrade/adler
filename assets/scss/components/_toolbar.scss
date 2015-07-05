@@ -32,15 +32,15 @@
 		max-width: 900px;
 		width: 100%;
 	  	padding: 0;
-		overflow: visible;
+		overflow: hidden;
 		max-height: 100px;
 	    min-height: 50px;
 		background-color: $white;
 
 	  .toolbar__head {
 		text-align: center;
-		margin: 0;
-		width: 100%;
+		margin: 0 auto;
+		width: 75%;
 	  }
 
 	  ul {
@@ -289,6 +289,11 @@
 .overlay__wrapper {
 	position: absolute;
     top: 33%;
+
+  @include query-below($lap) {
+	width: 70%;
+	text-align: left;
+  }
 }
 .overlay__close {
 	@include rhythm(width, 5);

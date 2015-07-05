@@ -65,14 +65,11 @@ jQuery(document).ready(function ($) {
     });
 
     $(".menu-toggle").click(function() {
-        $(".toolbar").toggle();
+        $(".toolbar, .logo").toggle().css("z-index","1");
+        $(".main-menu-container").toggleClass("padding--fix");
     });
 
-    var heights = $("#primary-menu").height();
-
-    if($(window).width() <= 900) {
-        $(".toolbar").css("margin-top", heights *2);
-    }
+    
     $(document).keyup(function(e) {
         if (e.keyCode == 27)
             $('.overlay--search').fadeOut("fast");

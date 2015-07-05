@@ -82,12 +82,13 @@ button {
     color: #0E3650;
 
     @include query-below ($lap) {
-      display: block !important;
-      float: right !important;
+      position: absolute;
+      right: 50px;
+      display: block;
       background-color: transparent;
       border: none;
       font-size: 20px;
-
+      z-index: 2;
 
       &::after {
         content:"\f0c9";
@@ -113,8 +114,10 @@ button {
       a {
 
         @include query-below($lap){
-          color: #0E3650;
+          color: $dark;
+          display: inline-block;
         }
+
         color: $lightest;
         text-decoration: none;
         @extend %gama;
@@ -345,8 +348,11 @@ button {
   }
 
   .main-menu-container{
-
     display:block;
+
+      &.padding--fix {
+        padding-top: 34px;
+      }
 
     @include query-below($lap) {
       background-color: #FFFFFF;
@@ -355,7 +361,6 @@ button {
       top: 0;
       left: 0;
       z-index: -1;
-      height: $heightfix;
     }
 
   }
