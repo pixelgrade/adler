@@ -9,9 +9,9 @@
 ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'wordpress.org/', 'adler' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'adler' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( 'wordpress.org' ); ?>"><?php printf( __( 'Proudly powered by %s', 'adler' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'adler' ), 'Adler', '<a href="pixelgrade.com" rel="designer">PixelGrade</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'adler' ), 'Adler', '<a href="//pixelgrade.com" rel="designer">PixelGrade</a>' ); ?>
 		</div><!-- .site-info -->
 
 		<nav id="footer-navigation" class="footer-navigation" role="navigation">
