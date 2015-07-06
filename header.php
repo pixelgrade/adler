@@ -27,8 +27,8 @@
 				<?php if ( ! empty( $main_logo_url ) ) { ?>
 					<img src="<?php echo esc_url($main_logo_url); ?>"/>
 				<?php } else { ?>
-					<h1 clrass="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<h1 class="site-title">
+						<?php bloginfo( 'name' ); ?>
 					</h1>
 				<?php } ?>
 			</a>

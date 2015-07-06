@@ -39,9 +39,7 @@
 
     .site-title {
 
-      a {
         color: $dark;
-      }
 
     }
 
@@ -153,14 +151,14 @@ button {
   .no-site-title {
     display: none;
   }
-}
 
-  .site-title a {
+  .site-title {
     text-decoration: none;
     border-bottom: 0;
-    color: $lightest;
+    color: $lightest !important;
     @extend %gama;
   }
+}
 
 .header-content {
   position: relative;
