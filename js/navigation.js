@@ -69,7 +69,6 @@ jQuery(document).ready(function ($) {
         $(".main-menu-container").toggleClass("padding--fix");
     });
 
-    
     $(document).keyup(function(e) {
         if (e.keyCode == 27)
             $('.overlay--search').fadeOut("fast");

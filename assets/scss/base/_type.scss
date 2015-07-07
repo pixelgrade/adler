@@ -15,7 +15,7 @@
 /* General */
 
 html {
-  font-size: percentage($base-font-size / 16px);
+  font-size: percentage($base-font-size / 19.4px);
   line-height: $base-line-height / $base-font-size;
 }
 
@@ -85,7 +85,7 @@ h4 {
 p {
   margin-top: 0;
   margin-bottom: 40px;
-  @extend %hyphening;
+  //@extend %hyphening;
 }
 
 b,

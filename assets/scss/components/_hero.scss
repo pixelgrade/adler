@@ -67,10 +67,19 @@
         @extend %white-hero;
         @extend %hero-gradient;
 
+        @include query-below($lap) {
+          font-size: 100%;
+          width: 65%;
+          margin: 0 auto;
+        }
+
         @include query-below($small) {
           font-size: 100%;
           display: block;
           padding:0 5px;
+        }
+        @include query-below($tiny){
+          font-size: 80%;
         }
       }
 
@@ -79,10 +88,19 @@
         @extend %white-hero;
         @extend %hero-gradient;
 
+        @include query-below($lap) {
+          font-size: 100%;
+          width: 65%;
+          margin: 0 auto;
+        }
+
         @include query-below($small) {
           font-size: 100%;
           display: block;
           padding:0 5px;
+        }
+        @include query-below($tiny){
+          font-size: 80%;
         }
 
       }
