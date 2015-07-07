@@ -71,6 +71,12 @@ img {
     float: left;
     margin-right: rhythm(1.5);
 
+    @include query-below($tiny) {
+        float:none;
+        margin: 0 auto !important;
+    }
+
+
     @include query-above($lap) {
         margin-left: -7 * $gutter;
     }
@@ -79,6 +85,11 @@ img {
 .alignright {
     float: right;
     margin-left: rhythm(1.5);
+
+    @include query-below($tiny) {
+        float:none;
+        margin: 0 auto !important;
+    }
 
     @include query-above($lap) {
         margin-right: -7 * $gutter;

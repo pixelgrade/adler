@@ -81,7 +81,7 @@ button {
 
     @include query-below ($lap) {
       position: absolute;
-      right: 50px;
+      right: 35px;
       display: block;
       background-color: transparent;
       border: none;
@@ -349,7 +349,7 @@ button {
     display:block;
 
       &.padding--fix {
-        padding-top: 34px;
+        padding-top: 35px;
       }
 
     @include query-below($lap) {

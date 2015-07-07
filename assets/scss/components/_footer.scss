@@ -17,6 +17,12 @@
   a:first-child {
     border: none;
   }
+
+  ul.menu {
+    @include query-below($small) {
+      padding-left: 0;
+    }
+  }
 }
 
 .site-info {

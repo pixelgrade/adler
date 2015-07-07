@@ -18,6 +18,16 @@ blockquote {
   position: relative;
    @extend %hyphening;
 
+  @include query-below($lap){
+    max-width: 100%;
+    margin:10px 20px;
+    font-size: 30px;
+    p {
+      background-size: 15px 32px;
+      background-color: #68f3c8;
+      background-image: linear-gradient(white 70%, transparent 70%, transparent);
+    }
+  }
     @include query-below($small){
       max-width: 100%;
       margin:20px 40px;

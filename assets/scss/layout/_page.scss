@@ -23,6 +23,12 @@
           float: left;
           margin-bottom: 40px;
           padding-right: 200px;
+
+          @include query-below($small) {
+            padding-right: 50px;
+          }
+
+
         }
 
         .nav-next {
@@ -34,6 +40,12 @@
   }
 }
 
+.site-content {
+
+  @include query-below($small) {
+    padding: 0 5px;
+  }
+}
 .blog .site-main {
   text-align: center;
 }

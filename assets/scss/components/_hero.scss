@@ -66,11 +66,12 @@
       .title {
         @extend %white-hero;
         @extend %hero-gradient;
-
+        white-space: nowrap;
         @include query-below($lap) {
           font-size: 100%;
-          width: 65%;
+          width: 80%;
           margin: 0 auto;
+
         }
 
         @include query-below($small) {
@@ -87,11 +88,12 @@
       .sub-title {
         @extend %white-hero;
         @extend %hero-gradient;
-
+        white-space: nowrap;
         @include query-below($lap) {
           font-size: 100%;
-          width: 65%;
+          width: 80%;
           margin: 0 auto;
+
         }
 
         @include query-below($small) {

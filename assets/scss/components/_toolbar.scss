@@ -34,13 +34,14 @@
 	  	padding: 0;
 		overflow: hidden;
 		max-height: 100px;
-	    min-height: 50px;
+	    min-height: 80px;
 		background-color: $white;
 
 	  .toolbar__head {
 		text-align: center;
 		margin: 0 auto;
 		width: 75%;
+
 	  }
 
 	  ul {
@@ -292,6 +293,9 @@
 
   @include query-below($lap) {
 	width: 70%;
+	text-align: left;
+  }
+  p {
 	text-align: left;
   }
 }
