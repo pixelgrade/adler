@@ -40,12 +40,7 @@
   }
 }
 
-.site-content {
 
-  @include query-below($small) {
-    padding: 0 5px;
-  }
-}
 .blog .site-main {
   text-align: center;
 }

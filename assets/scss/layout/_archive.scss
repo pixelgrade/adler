@@ -14,7 +14,7 @@
     position: relative;
 
     @include query-below($small){
-      padding: 0 1%
+      padding: 0;
     }
 
     .entry-header {
@@ -31,9 +31,6 @@
       margin-top: -60px;
       text-align: center;
 
-      @include query-below ($small) {
-        margin-right: 0;
-      }
     }
 
     .main-wrapper {
