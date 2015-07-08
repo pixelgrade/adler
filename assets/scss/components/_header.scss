@@ -155,7 +155,7 @@ button {
   .site-title {
     text-decoration: none;
     border-bottom: 0;
-    color: $lightest !important;
+    color: $lightest ;
     @extend %gama;
   }
 }

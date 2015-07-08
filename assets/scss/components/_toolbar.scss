@@ -1,6 +1,6 @@
 .toolbar {
 	@include rhythm(padding-right, 1);
-	@include rhythm(width, 7);
+	@include rhythm(width, 4);
 	position: absolute;
 	@include rhythm(top, 1);
   	@include rhythm(min-height, 28);
@@ -89,6 +89,8 @@
 .nav--toolbar {
 	word-wrap: normal;
     margin-bottom: 5px;
+    padding-left: 0;
+
 
 	a {
 		display: block;

@@ -3,9 +3,20 @@
     .hero__content {
       margin-bottom: 40px;
     }
+
+  }
+  .site-content {
+    @include query-below($small) {
+      padding: 0 5px;
+    }
   }
 }
 
+#page {
+  @include query-below($small){
+    overflow: hidden;
+  }
+}
 .content-area {
   .site-main {
     .posts-navigation {
@@ -35,6 +46,16 @@
           float: right;
           margin-bottom: 40px;
         }
+      }
+    }
+  }
+}
+
+.page {
+  &.no-thumbnail {
+    .site-branding {
+      .site-title {
+        color: $dark;
       }
     }
   }
