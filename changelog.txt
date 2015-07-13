@@ -13,3 +13,7 @@ Changelog
           Fixed Down Arrow on Firefox
     1.0.4 Fixed JavaScript console error
     1.0.6 Initial release.
+    1.1.0 Fixed link in the footer area
+          Added social icons menu
+          Added search option
+          Improvements on responsiveness
