@@ -234,18 +234,6 @@ button {
   @extend .nav;
   @extend .nav--stacked;
 
-  @include query-below($lap){
-    position: relative;
-    top:100%;
-    left:51%;
-    padding-left: 10px;
-    z-index: 1;
-    background-color: #FFF;
-    width: 100%;
-    display:block;
-    margin-bottom: 0;
-  }
-
   position: absolute;
   top: 100%;
   left: 50%;
@@ -256,8 +244,22 @@ button {
   text-align: center;
 
   background: transparent;
-
   transform: translateX(-50%);
+
+  @include query-above($lap) {
+    transform: translateX(-55%);
+  }
+  @include query-below($lap){
+    position: relative;
+    top: 100%;
+    left: 51%;
+    padding-left: 10px;
+    z-index: 1;
+    background-color: #FFF;
+    width: 100%;
+    display:block;
+    margin-bottom: 0;
+  }
 
   .lt-ie9 & {
     left: 0;
@@ -303,7 +305,9 @@ button {
   .sub-menu {
     left: 0;
     top: 100%;
-    transform: translateX(0);
+    @include query-above($lap) {
+      transform: translateX(-36%);
+    }
   }
 }
 
@@ -335,6 +339,12 @@ button {
 
   &:hover > .sub-menu, &:hover > .children  {
     display: block;
+  }
+
+  .sub-menu {
+    @include query-below($lap) {
+      left: 50%;
+    }
   }
 }
 

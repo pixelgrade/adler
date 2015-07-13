@@ -6,10 +6,22 @@
                     @extend blockquote;
             }
         }
+      .hero_categories {
+        display: inline-block;
+      }
+    .entry-title{
+      a {
+        border-bottom: 0;
+      }
+    }
+
         article {
           .entry-footer {
             display: none;
           }
         }
+      .post {
+        background: transparent;
+      }
     }
 }
