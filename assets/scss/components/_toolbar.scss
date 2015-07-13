@@ -1,6 +1,6 @@
 .toolbar {
 	@include rhythm(padding-right, 1);
-	@include rhythm(width, 4);
+	@include rhythm(width, 3);
 	position: absolute;
 	@include rhythm(top, 1);
   	@include rhythm(min-height, 28);
