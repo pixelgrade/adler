@@ -1,6 +1,6 @@
 .search-results {
     .content-area {
-        @extend %entry-wrapper;
+      text-align: center;
         .page-header {
             .page-title {
                     @extend blockquote;
@@ -20,8 +20,5 @@
             display: none;
           }
         }
-      .post {
-        background: transparent;
-      }
     }
 }
