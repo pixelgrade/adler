@@ -16,20 +16,16 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<?php
-		$counter = 0;
+		$adler_post_counter = 0;
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
-				if ( has_post_thumbnail( $posts[0]->ID ) && ( 0 == $counter ) ) {
+				if ( has_post_thumbnail( $posts[0]->ID ) && ( 0 == $adler_post_counter ) ) {
 					get_template_part( 'content', 'hero' );
-					$counter++;
+					$adler_post_counter++;
 					continue;
 				}
-				if ( 1 == $counter % 2 ) {
-					get_template_part( 'content', 'odd' );
-				} else {
-					get_template_part( 'content', 'even' );
-				}
-				$counter++;
+				get_template_part( 'content', 'notop' );
+				$adler_post_counter++;
 			endwhile;
 
 			the_posts_navigation();

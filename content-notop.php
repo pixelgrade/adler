@@ -5,7 +5,8 @@
 $split_titles = adler_split_title_half( get_the_title() );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'odd-post' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php	global $adler_post_counter; ($adler_post_counter % 2 == 1) ? 
+		post_class( 'odd-post' ) : post_class( 'even-post'); ?>>
 	<div class="entry-wrapper">
 		<header class="entry-header">
 				<h1 class="hero__title">

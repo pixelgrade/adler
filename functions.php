@@ -31,6 +31,8 @@ if ( ! function_exists( 'adler_setup' ) ) :
 		 */
 		load_theme_textdomain( 'adler', get_template_directory() . '/languages' );
 
+		global $adler_post_counter;
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 */
