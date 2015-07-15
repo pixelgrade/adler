@@ -10,7 +10,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php 
-		$counter = 0;
+		$adler_post_counter = 0;
 		if ( have_posts() ) : 
 		?>
 
@@ -19,20 +19,8 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php while ( have_posts() ) : the_post();
-
-				/* if the first post from search results has featured image, it displays it on full width */
-				if ( has_post_thumbnail($posts[0]->ID) && ($counter == 0)) {
-					get_template_part( 'content', 'hero' );
-					$counter++;
-					continue;
-				}
-
-				if ($counter%2 == 1) {
-					get_template_part( 'content', 'odd' );
-				} else {
-					get_template_part( 'content', 'even' );
-				}
-				$counter++;
+				get_template_part( 'content', 'notop' );
+				$adler_post_counter++;
 			endwhile;
 
 			the_posts_navigation(); 
