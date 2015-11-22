@@ -24,7 +24,6 @@ node_modules/
 *.js.map
 
 .svn
-README.md
 
 style.css
 editor-style.css
