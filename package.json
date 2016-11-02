@@ -2,19 +2,21 @@
   "name": "adler",
   "devDependencies": {
     "gulp": "*",
-    "gulp-sass": "~0.6.0",
-    "gulp-ruby-sass": "~0.7.1",
-    "gulp-autoprefixer": "0.0.6",
-    "gulp-minify-css": "*",
-    "gulp-ignore": "*",
-    "gulp-livereload": "*",
-    "gulp-notify": "*",
+    "gulp-livereload": "~1.0.1",
     "gulp-concat": "~2.1.7",
-    "gulp-exec": "~2.0.1",
-    "gulp-replace": "~0.4.0",
-    "gulp-clean": "~0.3.1",
-    "gulp-beautify": "*",
+    "gulp-clean": "~0.2.4",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-notify": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-exec": "~1.0.4",
+    "gulp-zip": "~0.1.2",
     "gulp-csscomb": "*",
-    "gulp-chmod": "*"
+    "gulp-chmod": "*",
+    "gulp-replace": "~0.3.0",
+    "del": "*",
+    "gulp-postcss": "*",
+    "gulp-rtlcss": "*",
+    "gulp-rename": "*"
   }
 }
