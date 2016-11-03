@@ -15,13 +15,10 @@ if ( has_post_thumbnail() ) {
 
 
 	<div class="hero__content">
-		<div class="hero__bg data-bully <?php echo $hero_class; ?>">
+		<div class="hero__bg data-bully rellax rellax-wrapper <?php echo $hero_class; ?>" data-rellax data-rellax-container>
 
-			<div class="rellax-fixed rellax-wrapper" data-rellax-container>
+				<img class="rellax-fixed fill" data-rellax src="<?php echo $image_url; ?>" />
 
-				<img class="rellax fill" src="<?php echo $image_url; ?>" />
-
-			</div>
 		</div>
 		<div class="hero__content-wrap content align-center">
 			<!-- The title of page divided in two parts-->
