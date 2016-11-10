@@ -84,13 +84,7 @@ function adler_scripts() {
 
 	wp_enqueue_style( 'adler-style', get_stylesheet_uri(), array('adler-font-awesome-style') );
 
-	wp_enqueue_script( 'adler-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
-
-	wp_enqueue_script( 'adler-prism', get_template_directory_uri() . '/assets/js/prism.js', array( 'jquery' ), '20120206', true );
-
 	wp_enqueue_script( 'adler-rellax', get_template_directory_uri() . '/assets/js/jquery.rellax.min.js', array( 'jquery' ), '20120206', true );
-
-	wp_enqueue_script( 'adler-bully', get_template_directory_uri() . '/assets/js/jquery.bully.js', array( 'jquery' ), '20120206', true );
 
 	wp_enqueue_script( 'adler-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20120209', true );
 

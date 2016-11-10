@@ -12,11 +12,12 @@
 		$split_titles = adler_split_title_half( get_the_title() );
 		$attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
 		$image_url        = $attachment_image[0];
-		$hero_class .= "hero_has_image";
-		$hero_style .= ' style="background-image: url(\'' . $image_url . '\')"'; ?>
+		$hero_class .= "hero_has_image"; ?>
 
 		<div class="hero__content">
-			<div class="hero__bg <?php echo $hero_class; ?>" <?php echo $hero_style; ?>></div>
+			<div class="hero__bg data-bully rellax rellax-wrapper <?php echo $hero_class; ?>" data-rellax data-rellax-container>
+				<img class="rellax-fixed fill" data-rellax src="<?php echo $image_url; ?>" />
+			</div>
 			<div class="hero__content-wrap content align-center">
 				<!--Create wrapper for categories and date -->
 				<div class="hero__meta">

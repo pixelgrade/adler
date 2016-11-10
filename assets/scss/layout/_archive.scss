@@ -2,6 +2,9 @@
   padding-top: 80px;
   background-color: $lightest;
 
+  &:nth-child(1) {
+   background-color: transparent;
+  }
   @include query-below($small){
     padding-top: 15px;
   }
@@ -31,6 +34,9 @@
       margin-top: -60px;
       text-align: center;
 
+      img {
+        max-width: 100%;
+      }
     }
 
     .main-wrapper {
